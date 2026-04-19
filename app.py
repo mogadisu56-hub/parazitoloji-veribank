@@ -3,34 +3,37 @@ import os
 
 # --- SAYFA AYARLARI ---
 st.set_page_config(
-    page_title="Parazitoloji Veri Bankası", 
+    page_title="KAEÜ Parazitoloji Veri Bankası", 
     page_icon="🔬",
-    layout="centered"
+    layout="wide"
 )
 
 # --- STİL (CSS) ---
 st.markdown("""
     <style>
-    .main { background-color: #f5f5f5; }
-    .stTextInput > div > div > input {
-        border: 2px solid #8b0000;
-        border-radius: 10px;
+    .main { background-color: #f8f9fa; }
+    .stExpander { border: 1px solid #8b0000; border-radius: 10px; margin-bottom: 5px; }
+    .tree-node { 
+        padding: 10px; 
+        border-left: 3px solid #8b0000; 
+        background-color: white; 
+        margin-left: 20px;
+        margin-top: 5px;
+        border-radius: 5px;
     }
-    .result-card {
-        background-color: white;
-        padding: 20px;
-        border-radius: 15px;
-        border-left: 5px solid #8b0000;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        color: #333;
+    .category-header {
+        color: #8b0000;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 2px solid #8b0000;
     }
     </style>
     """, unsafe_allow_html=True)
 
-# --- VERİ SETLERİ ---
+# --- GENİŞLETİLMİŞ VERİ SETİ ---
 parazit_verisi = {
     # --- AMİPLER (AMEBAE) ---
-    "Entamoeba histolytica": "insanlarda amibiyazise yol açan, patojen bir protozoondur ve özellikle kalın bağırsakta yerleşerek hem asemptomatik enfeksiyonlara hem de invaziv hastalıklara neden olabilir. Morfolojik olarak iki temel formu bulunur: trofozoit ve kist. Trofozoit formu hareketli, aktif ve patojen evredir; genellikle 15–20 µm boyutlarında olup psödopodlar aracılığıyla hareket eder ve sitoplazmasında eritrosit fagositozu görülebilir ki bu, tür için ayırt edici bir özelliktir. Çekirdeğinde merkezi yerleşimli karyozom ve ince, düzenli periferik kromatin bulunur. Kist formu ise enfektif evredir; genellikle 10–15 µm çapında olup olgun kistler dört çekirdeklidir. Yaşam döngüsü fekal-oral yolla bulaşma ile başlar. Enfektif kistlerin kontamine su veya gıdalarla alınması sonrası ince bağırsakta eksistasyon gerçekleşir ve trofozoitler açığa çıkar. Bu trofozoitler kalın bağırsağa yerleşerek çoğalır. Bir kısmı bağırsak lümeninde kalarak kistleşir ve dışkı ile atılırken, bir kısmı mukozayı invaze ederek ülserlere ve sistemik yayılıma neden olabilir. Portal dolaşım yoluyla en sık karaciğere ulaşarak amibik karaciğer apsesi oluşturabilir. Epidemiyolojik olarak özellikle sanitasyonun yetersiz olduğu bölgelerde yaygındır. Tropikal ve subtropikal ülkelerde daha sık görülür. Enfeksiyon kaynağı genellikle asemptomatik taşıyıcılardır. Kirli su kullanımı, hijyen eksikliği ve kalabalık yaşam koşulları bulaşı artırır. İmmünolojik açıdan, konak savunmasında hücresel bağışıklık önemli rol oynar. Mukozal bariyer, sekretuar IgA ve makrofaj aktivitesi enfeksiyona karşı koruyucudur. Ancak parazit, proteolitik enzimler ve sitotoksik moleküller salgılayarak doku invazyonu yapabilir ve konak savunmasını aşabilir. Prognoz, hastalığın formuna bağlıdır. Asemptomatik enfeksiyonlar genellikle iyi seyirlidir. Ancak invaziv bağırsak amibiyazisi ve özellikle karaciğer apsesi gelişen olgularda tedavi edilmezse ciddi komplikasyonlar ve mortalite görülebilir. Erken tanı ve uygun tedavi ile prognoz genellikle iyidir. Tanı, dışkı incelemesinde kist veya trofozoitlerin gösterilmesi ile konur. Özellikle eritrosit fagosite etmiş trofozoitlerin görülmesi tanı koydurucudur. Antijen tespit testleri, serolojik yöntemler ve moleküler teknikler de tanıda kullanılabilir. Ekstraintestinal enfeksiyonlarda görüntüleme yöntemleri (özellikle karaciğer apsesi için) önemlidir. Tedavide, invaziv enfeksiyonlarda metronidazol veya tinidazol gibi doku etkili ilaçlar kullanılır. Ardından lümende kalan kistlerin eradikasyonu için paromomisin veya diloksanid furoat gibi lüminal amebisidler verilmelidir. Asemptomatik taşıyıcılarda ise yalnızca lüminal tedavi yeterlidir",
+    "Entamoeba histolytica": "MORFOLOJİ: Trofozoit (merkezi endozom), Kist (1-4 çekirdek). | DÖNGÜ: Kist alımı -> Kalın bağırsak yerleşimi. | TANI: Dışkıda hematofaj trofozoit. | TEDAVİ: Metronidazol.",
     "Entamoeba hartmanni": "BİLGİ: Non-patojen amip. E. histolytica'ya benzer ancak daha küçüktür (<10µm).",
     "Entamoeba coli": "MORFOLOJİ: Kist 8 çekirdekli, eksantrik endozom. BİLGİ: Non-patojen bağırsak kommensali.",
     "Entamoeba polecki": "BİLGİ: Domuz/maymun amibi. TANI: Tek çekirdekli kist yapısı karakteristiktir.",
@@ -120,42 +123,121 @@ parazit_verisi = {
     "Glossina türleri": "BİLGİ: Çeçe sineği. Uyku hastalığı vektörü."
 }
 
-# --- ARAYÜZ ---
-col1, col2 = st.columns([1, 3])
+# --- ARAYÜZ ÜST KISIM ---
+col1, col2 = st.columns([1, 5])
 with col1:
-    if os.path.exists("logo.png"):
-        st.image("logo.png", width=80)
+    st.markdown("# 🔬")
 with col2:
-    st.markdown("<h3 style='margin-bottom:0;'>KAEÜ Tıp Fakültesi</h3>", unsafe_allow_html=True)
-    st.markdown("<p style='color:gray;'>Tıbbi Parazitoloji AD</p>", unsafe_allow_html=True)
+    st.markdown("<h2 style='margin-bottom:0;'>KAEÜ Tıp Fakültesi</h2>", unsafe_allow_html=True)
+    st.markdown("<p style='color:gray;'>Tıbbi Parazitoloji Anabilim Dalı Akademik Rehberi</p>", unsafe_allow_html=True)
 
-st.markdown("---")
-st.markdown("#### 🔬 Parazit/Terim Sorgula")
+# --- ANA SEKMELER ---
+ana_sekme1, ana_sekme2, ana_sekme3 = st.tabs(["🔍 Hızlı Sorgu", "🗂️ Tıbbi Önemi Olan Parazitler", "🌳 Parazitoloji Ağacı"])
 
-sorgu = st.text_input("", placeholder="Örn: Entamoeba histolytica")
-
-if st.button("BİLGİLERİ GETİR") or (sorgu != ""):
+# --- SEKME 1: SORGULAMA ---
+with ana_sekme1:
+    sorgu = st.text_input("Parazit veya Terim Adı Giriniz:", placeholder="Örn: Toxoplasma gondii")
     if sorgu:
-        found = False
-        # Harfi harfine ancak büyük/küçük harf duyarsız kontrol
-        for key, value in parazit_verisi.items():
-            if key.lower() == sorgu.strip().lower():
-                kategori = 'Tıbbi Parazit' if key in parazit_verisi else 'Akademik Terim'
+        results = {k: v for k, v in parazit_verisi.items() if sorgu.lower() in k.lower()}
+        if results:
+            for isim, bilgi in results.items():
                 st.markdown(f"""
-                <div class='result-card'>
-                    <h3 style='color:#8b0000;'>{key.upper()}</h3>
-                    <p><b>Kategori:</b> {kategori}</p>
-                    <hr>
-                    {value.replace(' | ', '<br><br>')}
+                <div style='background-color: white; padding: 20px; border-radius: 10px; border-left: 5px solid #8b0000; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom:10px;'>
+                    <h4 style='color:#8b0000; margin-top:0;'>{isim}</h4>
+                    {bilgi.replace(' | ', '<br>')}
                 </div>
                 """, unsafe_allow_html=True)
-                found = True
-                break
-        
-        if not found:
-            st.error("❌ Kayıt bulunamadı. Lütfen yazımı kontrol edin.")
-    elif st.button("BİLGİLERİ GETİR"): # Boş sorgu butonu basılırsa
-        st.warning("Lütfen bir isim yazın.")
+        else:
+            st.error("Kayıt bulunamadı.")
 
-st.markdown("<br><br>", unsafe_allow_html=True)
-st.caption("© 2026 Tıbbi Parazitoloji Akademik Rehberi")
+# --- SEKME 2: SINIFLANDIRMA (HIYERARŞİK) ---
+with ana_sekme2:
+    st.markdown("### 📚 Sistematik Sınıflandırma")
+    
+    p_kat, h_kat, a_kat = st.columns(3)
+
+    with p_kat:
+        with st.expander("🧫 PROTOZOONLAR"):
+            with st.expander("Sarcomastigophora"):
+                with st.expander("Sarcodina (Amipler)"):
+                    st.write("- Entamoeba histolytica / dispar\n- E. hartmanni / coli / polecki / gingivalis\n- Endolimax nana\n- Iodamoeba bütschlii")
+                    st.caption("Serbest Yaşayanlar: Naegleria, Acanthamoeba, Balamuthia, Sappinia")
+                with st.expander("Mastigophora (Kamçılılar)"):
+                    st.markdown("**Sindirim:** Giardia, Chilomastix, Dientamoeba, Trichomonas hominis")
+                    st.markdown("**Ürogenital:** Trichomonas vaginalis")
+                    st.markdown("**Kan-Doku:** Leishmania türleri, Trypanosoma türleri")
+            
+            with st.expander("Apicomplexa (Sporozoonlar)"):
+                st.write("- Plasmodium türleri\n- Babesia türleri\n- Toxoplasma gondii\n- Cryptosporidium, Cyclospora, Cystoisospora")
+            
+            with st.expander("Ciliophora"):
+                st.write("- Balantidium coli")
+            
+            with st.expander("Diğer"):
+                st.write("- Blastocystis hominis\n- Microsporidia\n- Pneumocystis jiroveci")
+
+    with h_kat:
+        with st.expander("🐛 HELMİNTLER"):
+            with st.expander("Nematodlar (Yuvarlak)"):
+                st.write("- Ascaris, Enterobius, Trichuris\n- Kancalı Kurtlar (Necator, Ancylostoma)\n- Strongyloides, Trichinella")
+                st.caption("Filarialar: Wuchereria, Brugia, Loa loa, Onchocerca")
+            with st.expander("Sestodlar (Şeritler)"):
+                st.write("- Taenia saginata / solium\n- Hymenolepis nana / diminuta\n- Diphyllobothrium latum\n- Echinococcus granulosus")
+            with st.expander("Trematodlar (Yassı)"):
+                st.write("- Fasciola hepatica\n- Schistosoma türleri\n- Clonorchis sinensis\n- Paragonimus westermani")
+
+    with a_kat:
+        with st.expander("🕷️ ARTROPODLAR"):
+            with st.expander("Insecta (Böcekler)"):
+                st.write("- Bitler (Pediculus, Pthirus)\n- Pireler ve Tahtakuruları\n- Sinekler (Anopheles, Phlebotomus, Glossina)")
+            with st.expander("Arachnida (Araknidler)"):
+                st.write("- Sarcoptes scabiei (Uyuz)\n- Keneler (Ixodes, Rhipicephalus)\n- Demodex türleri")
+            with st.expander("Crustacea"):
+                st.write("- Cyclops türleri")
+
+# --- SEKME 3: PARAZİTOLOJİ AĞACI ---
+with ana_sekme3:
+    st.markdown("### 🌳 Parazitoloji Akademik Soy Ağacı")
+    st.info("Aşağıdaki liste, tüm tıbbi parazitoloji müfredatının dallanmış yapısını gösterir.")
+    
+    col_a, col_b = st.columns(2)
+    
+    with col_a:
+        st.markdown("<div class='category-header'>1. PROTOZOA</div>", unsafe_allow_html=True)
+        st.markdown("""
+        * **Sarcomastigophora**
+            * *Sarcodina:* E. histolytica, E. coli, Naegleria fowleri...
+            * *Mastigophora:* Giardia, Leishmania, Trypanosoma, T. vaginalis...
+        * **Apicomplexa**
+            * Plasmodium (Sıtma), Babesia, Toxoplasma, Cryptosporidium...
+        * **Ciliophora**
+            * Balantidium coli
+        * **Diğer**
+            * Blastocystis, Pneumocystis...
+        """, unsafe_allow_html=True)
+
+        st.markdown("<br><div class='category-header'>2. HELMİNTLER</div>", unsafe_allow_html=True)
+        st.markdown("""
+        * **Nematoda**
+            * Bağırsak: Ascaris, Enterobius, Trichuris...
+            * Doku/Kan: Wuchereria, Loa loa, Dracunculus...
+        * **Platyhelminthes**
+            * *Sestodlar:* Taenia, Echinococcus, H. nana...
+            * *Trematodlar:* Fasciola, Schistosoma...
+        """, unsafe_allow_html=True)
+
+    with col_b:
+        st.markdown("<div class='category-header'>3. ARTROPODLAR</div>", unsafe_allow_html=True)
+        st.markdown("""
+        * **Insecta**
+            * Anopheles, Culex, Phlebotomus (Vektörler)
+            * Pediculus (Bit), Cimex (Tahtakurusu)
+        * **Arachnida**
+            * Ixodes (Kene), Sarcoptes (Uyuz)
+        * **Crustacea**
+            * Cyclops
+        """, unsafe_allow_html=True)
+
+# --- FOOTER ---
+st.markdown("---")
+st.caption("© 2026 Kırşehir Ahi Evran Üniversitesi Tıp Fakültesi - Tıbbi Parazitoloji Anabilim Dalı")
