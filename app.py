@@ -162,7 +162,7 @@ with ana_sekme2:
                 with st.expander("Sarcodina (Amipler)"):
                     st.write("- Entamoeba histolytica / dispar\n- Entamoeba hartmanni\n- Entamoeba coli\n-Entamoeba polecki\n-Endolimax nana\n-Iodamoeba bütschlii\n-Entamoeba gingivalis")
                 with st.expander("Serbest Yaşayanlar Amipler)"):
-                    st.caption("-Naegleria fowleri\n- Acanthamoeba türleri\n-  Balamuthia\n- Sappinia pedata")
+                    st.write("-Naegleria fowleri\n- Acanthamoeba türleri\n-  Balamuthia\n- Sappinia pedata")
                 with st.expander("Mastigophora (Kamçılılar)"):
                     st.markdown("**Sindirim:** Giardia, Chilomastix, Dientamoeba, Trichomonas hominis")
                     st.markdown("**Ürogenital:** Trichomonas vaginalis")
