@@ -81,7 +81,7 @@ parazit_verisi = {
     "Cyclospora cayetanensis": "BİLGİ: Meyve/sebze ile bulaş. Asido-rezistan ookistler.",
     "Microsporidia": "BİLGİ: Hücre içi zorunlu parazit. Polar tüp içerir.",
     "Toxoplasma gondii": "BİLGİ: Son konak kedidir. Gebelerde teratojenik risk.",
-    "Pneumocystis jiroveci": "KLİNİK: PCP (Pneumocystis pnömonisi). TANI: Gümüşleme boyama.",
+    "Pneumocystis jirovecii": "KLİNİK: PCP (Pneumocystis pnömonisi). TANI: Gümüşleme boyama.",
 
     # --- NEMATODLAR ---
     "Enterobius vermicularis": "KLİNİK: Kıl kurdu. TANI: Selofan bant yöntemi (Yumurta asimetrik D harfi).",
@@ -160,12 +160,14 @@ with ana_sekme2:
         with st.expander("🧫 PROTOZOONLAR"):
             with st.expander("Sarcomastigophora"):
                 with st.expander("Sarcodina (Amipler)"):
-                    st.write("- Entamoeba histolytica / dispar\n- Entamoeba hartmanni\n- Entamoeba coli\n-Entamoeba polecki\n-Endolimax nana\n-Iodamoeba bütschlii\n-Entamoeba gingivalis")
+                    with st.expander("Entamoeba histolytica"):
+                    st.write("-Entamoeba histolytica, dünya genelinde amebiyazis olarak bilinen hastalığa neden olan ve temel olarak fekal-oral (dışkı-ağız) yoluyla bulaşan parazitik bir protozoondur. Bu parazitin bulaşma süreci, enfekte bireylerin dışkısında bulunan ve dış ortama oldukça dayanıklı olan kist formlarının, bir şekilde başka bir kişinin ağzına girmesiyle gerçekleşir. En yaygın bulaşma kaynağı, parazit kistleriyle kirlenmiş içme suları ile bu sularla yıkanmış veya sulanmış çiğ sebze ve meyvelerin tüketilmesidir. Bunun yanı sıra, tuvalet sonrası el hijyenine dikkat etmeyen enfekte kişilerin hazırladığı gıdalar aracılığıyla veya kirli ellerin ağza götürülmesiyle de parazit kolayca yayılabilir. Sinekler ve hamamböcekleri gibi taşıyıcı canlılar da dışkıdaki kistleri yiyeceklerin üzerine taşıyarak dolaylı yoldan bulaşmaya neden olabilirler. Ayrıca, oral-anal temas içeren cinsel aktiviteler de parazitin doğrudan kişiden kişiye geçmesi için önemli bir risk faktörüdür. Kistler klora karşı dirençli oldukları için sadece standart dezenfeksiyon işlemleri yeterli olmayabilir; bu nedenle suyun kaynatılması, filtrasyon ve gıdaların çok iyi yıkanması korunmada kritik rol oynar")
                 with st.expander("Serbest Yaşayanlar Amipler)"):
+                    st.write("- Entamoeba histolytica / dispar\n- Entamoeba hartmanni\n- Entamoeba coli\n-Entamoeba polecki\n-Endolimax nana\n-Iodamoeba bütschlii\n-Entamoeba gingivalis")
                     st.write("- Naegleria fowleri\n- Acanthamoeba türleri\n-  Balamuthia\n- Sappinia pedata")
                 with st.expander("Mastigophora (Kamçılılar)"):
                     st.markdown("**Sindirim:** Giardia, Chilomastix, Dientamoeba, Trichomonas hominis")
-                    st.markdown("**Ürogenital:** Trichomonas vaginalis")
+                    st.markdown("**Ürogenital:** Trichomonalis")
                     st.markdown("**Kan-Doku:** Leishmania türleri, Trypanosoma türleri")
             
             with st.expander("Apicomplexa (Sporozoonlar)"):
