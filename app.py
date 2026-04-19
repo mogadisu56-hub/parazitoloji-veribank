@@ -168,7 +168,7 @@ with ana_sekme2:
                         st.write("- abc")
                     with st.expander("Entamoeba polecki"):
                         st.write("- abc")
-                    with st.expander("Entamoeba histolytica")
+                    with st.expander("Entamoeba histolytica"):
                         st.write("- Balantidium coli")
                 with st.expander("Serbest Yaşayanlar Amipler)"):
                     st.write("- Entamoeba histolytica / dispar\n- Entamoeba hartmanni\n- Entamoeba coli\n-Entamoeba polecki\n-Endolimax nana\n-Iodamoeba bütschlii\n-Entamoeba gingivalis")
