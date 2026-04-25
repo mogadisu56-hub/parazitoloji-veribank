@@ -140,24 +140,34 @@ ana_sekme1, ana_sekme2, ana_sekme3 = st.tabs(["🔍 Hızlı Sorgu", "🗂️ Tı
 with ana_sekme1:
     sorgu = st.text_input("Parazit veya Terim Adı Giriniz:", placeholder="Örn: Toxoplasma gondii")
     if sorgu:
-        # Bu satır sorguyu yapar
         results = {k: v for k, v in parazit_verisi.items() if sorgu.lower() in k.lower()}
         
-        if results: # Eğer sonuç bulunduysa
+        if results:
             for isim, veri in results.items():
-                # Başlık
-                st.subheader(isim)
+                # Kitap Başlığı gibi büyük isim
+                st.markdown(f"## {isim}") 
+                st.divider() # Araya ince bir çizgi çeker
                 
-                # ÖNEMLİ: Verinin sözlük mü yoksa metin mi olduğunu kontrol et
                 if isinstance(veri, dict):
-                    st.write(veri["bilgi"])
-                    # Resim yolu varsa ve dosya gerçekten bilgisayardaysa göster
-                    if "resim" in veri and os.path.exists(veri["resim"]):
-                        st.image(veri["resim"], caption=f"{isim} Mikroskobik Görüntüsü")
-                    else:
-                        st.info("Bu parazit için görsel henüz eklenmedi.")
+                    # Kitap Düzeni: Yazı ve Resmi yan yana veya alt alta şık yerleştirme
+                    col_metin, col_resim = st.columns([2, 1]) # Yazıya 2 birim, resme 1 birim yer ayır
+                    
+                    with col_metin:
+                        st.markdown("### Genel Bilgiler")
+                        st.write(veri["bilgi"])
+                    
+                    with col_resim:
+                        # DOSYA YOLU KONTROLÜ
+                        # Resim dosyasının adını ve yolunu tam kontrol et
+                        resim_yolu = veri["resim"]
+                        
+                        if os.path.exists(resim_yolu):
+                            st.image(resim_yolu, caption=f"{isim} Morfolojisi", use_container_width=True)
+                        else:
+                            # Resim yoksa neden olmadığını anlamak için hata mesajı gösterelim
+                            st.error(f"⚠️ Resim Bulunamadı!\n\nAranan Yol: {resim_yolu}")
+                            st.info("İpucu: Klasör isminin ve dosya uzantısının (.png / .jpg) birebir aynı olduğundan emin olun.")
                 else:
-                    # Eğer veri hala düz metinse (eski halindeyse) direkt yazdır
                     st.write(veri)
         else:
             st.error("Kayıt bulunamadı.")
