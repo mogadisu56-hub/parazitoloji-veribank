@@ -35,7 +35,7 @@ parazit_verisi = {
     # --- AMİPLER (AMEBAE) ---
     "Entamoeba histolytica": {
         "bilgi": "MORFOLOJİ: Trofozoit (Aktif Form) Bu evre, parazitin bağırsakta hareket ettiği, beslendiği ve çoğaldığı evredir.  Boyut: Genellikle 12–60 (ortalama 20 ). Hareket: Tek bir yöne doğru, hızlı ve doğrusal hareket eder. Hareketini psödopod (yalancı ayak) denilen parmak benzeri uzantılarla sağlar. Sitoplazma: İki kısımdan oluşur: Ektoplazma: Dışta, berrak ve cam gibi görünür. Endoplazma: İçte, granüllü yapıdadır. Sindirilmiş eritrositler (alyuvarlar) içerebilir; bu, E. histolytica için ayırt edici (patojenik) bir özelliktir. Çekirdek: Tek bir çekirdeği vardır. Çekirdek zarının iç yüzeyinde ince granüllü kromatin dizilidir ve merkezde küçük bir karyozom bulunur. Kist (Enfektif Form) Dış ortama dirençli, enfeksiyonun bulaşmasından sorumlu olan hareketsiz formdur. Boyut: Genellikle 10–20 çapındadır ve yuvarlak/oval şekillidir. Olgun Kist: Karakteristik olarak 4 çekirdek içerir. (Genç kistlerde 1 veya 2 çekirdek görülebilir). Kromatoid Cisimcikler: Sitoplazmada uçları yuvarlak, çomak veya puro şeklinde koyu boyanan yapılar bulunabilir (genç kistlerde daha belirgindir). Glikojen Vakuolü: Genç kistlerde büyük bir glikojen kitlesi bulunur, kist olgunlaştıkça bu kitle kaybolur. | DÖNGÜ: Enfeksiyonun Başlaması (Kist Alımı): Olgun, 4 çekirdekli kistler fekal-oral yolla (dışkıyla kirlenmiş eller, su veya yiyecek) vücuda girer. Kistler, mide asidine karşı dirençlidir; bu sayede mideyi zarar görmeden geçerler. Ekskistasyon (Kistten Çıkış): Kistler ince bağırsağa ulaştığında, koruyucu duvarları parçalanır ve kistten trofozoitler çıkar. Her bir kistten bölünmeler sonucu toplamda 8 adet küçük trofozoit oluşur. Yerleşme ve Çoğalma (Trofozoit Evresi): Trofozoitler kalın bağırsağa (kolona) geçer ve burada yerleşirler. Burada ikili bölünme (binary fission) yoluyla hızla çoğalırlar. Trofozoitler amibin hareketli ve beslenen evresidir; bağırsak epiteli ve kırmızı kan hücrelerini yiyerek (fagositoz) hayatta kalırlar. Enkistasyon (Kistleşme): Bağırsak içeriği kuruyup dışarı atılmaya hazırlandıkça, bazı trofozoitler tekrar yuvarlaklaşır ve etraflarına koruyucu bir duvar örerek kiste dönüşürler. Bu kistler dışkı yoluyla dış ortama atılır. Önemli Klinik Bilgiler Patojenik Etki: Trofozoitler bağırsak duvarına saldırarak ülserlere ve kanlı ishale (amipli dizanteri) neden olabilir. Ekstraintestinal Yayılım: Bazı vakalarda parazit kan dolaşımına karışarak karaciğer (en sık), akciğer veya beyin gibi organlarda apselere yol açabilir. Taşıyıcılık: Enfekte kişilerin çoğu belirti göstermez ancak dışkılarıyla kist yaymaya devam ederek başkalarını enfekte edebilirler. | TANI: Dışkıda hematofaj trofozoit. | TEDAVİ: Metronidazol.",
-        "resim": "parazit program/Entamoeba histolytica.png",}
+        "resim": "parazit program/Entamoeba histolytica.png"}
     "Entamoeba hartmanni": "BİLGİ: Non-patojen amip. E. histolytica'ya benzer ancak daha küçüktür (<10µm).",
     "Entamoeba coli": "MORFOLOJİ: Kist 8 çekirdekli, eksantrik endozom. BİLGİ: Non-patojen bağırsak kommensali.",
     "Entamoeba polecki": "BİLGİ: Domuz/maymun amibi. TANI: Tek çekirdekli kist yapısı karakteristiktir.",
@@ -140,18 +140,27 @@ ana_sekme1, ana_sekme2, ana_sekme3 = st.tabs(["🔍 Hızlı Sorgu", "🗂️ Tı
 with ana_sekme1:
     sorgu = st.text_input("Parazit veya Terim Adı Giriniz:", placeholder="Örn: Toxoplasma gondii")
     if sorgu:
-    results = {k: v for k, v in parazit_verisi.items() if sorgu.lower() in k.lower()}
-    for isim, veri in results.items():
-        # Başlık ve Bilgi
-        st.subheader(isim)
-        st.write(veri["bilgi"])
+        # Bu satır sorguyu yapar
+        results = {k: v for k, v in parazit_verisi.items() if sorgu.lower() in k.lower()}
         
-        # Resim Kontrolü ve Gösterme
-        import os # Dosya var mı diye kontrol etmek için
-        if os.path.exists(veri["resim"]):
-            st.image(veri["resim"], caption=f"{isim} Mikroskobik Görüntüsü", use_container_width=True)
+        if results: # Eğer sonuç bulunduysa
+            for isim, veri in results.items():
+                # Başlık
+                st.subheader(isim)
+                
+                # ÖNEMLİ: Verinin sözlük mü yoksa metin mi olduğunu kontrol et
+                if isinstance(veri, dict):
+                    st.write(veri["bilgi"])
+                    # Resim yolu varsa ve dosya gerçekten bilgisayardaysa göster
+                    if "resim" in veri and os.path.exists(veri["resim"]):
+                        st.image(veri["resim"], caption=f"{isim} Mikroskobik Görüntüsü")
+                    else:
+                        st.info("Bu parazit için görsel henüz eklenmedi.")
+                else:
+                    # Eğer veri hala düz metinse (eski halindeyse) direkt yazdır
+                    st.write(veri)
         else:
-            st.warning("Resim dosyası bulunamadı!")
+            st.error("Kayıt bulunamadı.")
 
 # --- SEKME 2: SINIFLANDIRMA (HIYERARŞİK) ---
 with ana_sekme2:
