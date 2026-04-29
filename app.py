@@ -54,7 +54,7 @@ parazit_verisi = {
         İlaç Tedavisi: İnvaziv Enfeksiyonlar: Metronidazol (en yaygın), tinidazol veya ornidazol. Luminal (Taşıyıcılık) Tedavisi: Paromomisin, iyodokinol veya diloksanid furoat. Gebelikte: Paromomisin güvenli bir seçenektir. 
         Cerrahi: Perforasyon, şiddetli kanama veya ilaç tedavisine yanıt vermeyen büyük karaciğer apselerinde (özellikle sol lop yerleşimli rüptür riski olanlar) drenaj veya cerrahi müdahale gerekebilir. 
         Korunma: Temiz içme suyu sağlanması, kanalizasyon altyapısının iyileştirilmesi, gıda sektöründe çalışanların periyodik kontrolü ve el yıkama alışkanlığının yaygınlaştırılması temel korunma yollarıdır.""",
-        "resim": "parazit_program/Entamoeba_histolytica.png"},
+        "resim": "parazit_program/Entamoeba_histolytica.png"}
     "Entamoeba hartmanni": "BİLGİ: Non-patojen amip. E. histolytica'ya benzer ancak daha küçüktür (<10µm).",
     "Entamoeba coli": "MORFOLOJİ: Kist 8 çekirdekli, eksantrik endozom. BİLGİ: Non-patojen bağırsak kommensali.",
     "Entamoeba polecki": "BİLGİ: Domuz/maymun amibi. TANI: Tek çekirdekli kist yapısı karakteristiktir.",
