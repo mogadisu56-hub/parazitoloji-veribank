@@ -280,24 +280,63 @@ with ana_sekme2:
             diger = ["Blastocystis hominis", "Microsporidia", "Pneumocystis jirovecii"]
             for p in diger: parazit_yazdir(p)
 
-    # 2. KOLON: HELMİNTLER
+   # 2. KOLON: HELMİNTLER (Görseldeki Güncel Sınıflandırmaya Göre)
     with h_kat:
         st.markdown("<h4 style='color:#8b0000;'>🐛 HELMİNTLER</h4>", unsafe_allow_html=True)
         
-        with st.expander("Nematodlar (Yuvarlak)"):
-            nematodlar = ["Enterobius vermicularis", "Trichuris trichiura", "Ascaris lumbricoides", "Necator americanus", 
-                          "Ancylostoma duodenale", "Strongyloides stercoralis", "Trichinella spiralis", "Dracunculus medinensis",
-                          "Wuchereria bancrofti", "Brugia malayi", "Loa loa", "Onchocerca volvulus"]
-            for p in nematodlar: parazit_yazdir(p)
+        # --- 1- NEMATODLAR ---
+        with st.expander("1- NEMATODLAR (Yuvarlak Solucanlar)"):
+            st.markdown("<p style='font-weight:bold; color:#8b0000;'>Bağırsak Nematodları</p>", unsafe_allow_html=True)
+            b_nematod = [
+                "Ascaris lumbricoides", "Ancylostoma duodenale", "Necator americanus", 
+                "Strongyloides stercoralis", "Trichostrongylus türleri", "Enterobius vermicularis", 
+                "Trichuris trichiura", "Capillaria philippinensis", "Gongylonema pulchrum", 
+                "Strongyloides fuelloborni", "Trichinella türleri"
+            ]
+            for p in b_nematod: parazit_yazdir(p)
 
-        with st.expander("Sestodlar (Şeritler)"):
-            sestodlar = ["Taenia saginata", "Taenia solium", "Hymenolepis nana", "Hymenolepis diminuta", 
-                         "Diphyllobothrium latum", "Echinococcus granulosus"]
-            for p in sestodlar: parazit_yazdir(p)
+            st.markdown("<p style='font-weight:bold; color:#8b0000;'>Dolaşım ve Doku Nematodları</p>", unsafe_allow_html=True)
+            d_nematod = [
+                "Wuchereria bancrofti", "Brugia malayi", "Loa loa", "Mansonella türleri", 
+                "Onchocerca volvulus", "Dirofilaria repens", "Dracunculus medinensis", "Capillaria hepatica"
+            ]
+            for p in d_nematod: parazit_yazdir(p)
+            
+            st.markdown("<p style='font-weight:bold; color:#8b0000;'>Larva Migrans Etkenleri</p>", unsafe_allow_html=True)
+            l_migrans = ["Ancylostoma braziliense", "Toxocara canis", "Toxocara cati", "Gnathostoma türleri", "Anisakis türleri"]
+            for p in l_migrans: parazit_yazdir(p)
 
-        with st.expander("Trematodlar (Yassı)"):
-            trematodlar = ["Fasciola hepatica", "Clonorchis sinensis", "Schistosoma mansoni", "Schistosoma haematobium"]
-            for p in trematodlar: parazit_yazdir(p)
+        # --- 2- TREMATODLAR ---
+        with st.expander("2- TREMATODLAR (Yassı Solucanlar)"):
+            col_t1, col_t2 = st.columns(2)
+            with col_t1:
+                st.markdown("<p style='font-size:0.9em; font-weight:bold;'>Karaciğer</p>", unsafe_allow_html=True)
+                t_karaciger = ["Fasciola hepatica", "Fasciola gigantica", "Dicrocoelium dendriticum", "Clonorchis sinensis", "Opisthorchis felineus"]
+                for p in t_karaciger: parazit_yazdir(p)
+                
+                st.markdown("<p style='font-size:0.9em; font-weight:bold;'>Akciğer</p>", unsafe_allow_html=True)
+                parazit_yazdir("Paragonimus westermani")
+
+            with col_t2:
+                st.markdown("<p style='font-size:0.9em; font-weight:bold;'>Bağırsak</p>", unsafe_allow_html=True)
+                t_bagirsak = ["Fasciolopsis buski", "Heterophyes heterophyes", "Metagonimus yokogawai", "Echinostoma türleri"]
+                for p in t_bagirsak: parazit_yazdir(p)
+
+                st.markdown("<p style='font-size:0.9em; font-weight:bold;'>Kan (Schistosoma)</p>", unsafe_allow_html=True)
+                t_kan = ["Schistosoma haematobium", "Schistosoma mansoni", "Schistosoma japonicum"]
+                for p in t_kan: parazit_yazdir(p)
+
+        # --- 3- SESTODLAR ---
+        with st.expander("3- SESTODLAR (Şeritler)"):
+            st.markdown("<p style='font-weight:bold; color:#8b0000;'>Cyclophyllidea</p>", unsafe_allow_html=True)
+            s_cyclo = [
+                "Taenia saginata", "Taenia solium", "Hymenolepis nana", 
+                "Hymenolepis diminuta", "Dipylidium caninum", "Echinococcus granulosus", "Echinococcus multilocularis"
+            ]
+            for p in s_cyclo: parazit_yazdir(p)
+
+            st.markdown("<p style='font-weight:bold; color:#8b0000;'>Pseudophyllidea</p>", unsafe_allow_html=True)
+            parazit_yazdir("Diphyllobothrium latum")
 
     # 3. KOLON: ARTROPODLAR
     with a_kat:
