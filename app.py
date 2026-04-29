@@ -92,7 +92,7 @@ Kromatoid Cisimcikler: Morfolojik açıdan Entamoeba histolytica ile benzerlik t
 Klinik Durum ve Patojenite
 Patojenite: İnsanlar için patojen olarak kabul edilmektedir.
 
-Tedavi ve Takip: Patogenezi ve standart tedavi protokolleri tıp literatüründe henüz tam olarak aydınlatılmamıştır""""},
+Tedavi ve Takip: Patogenezi ve standart tedavi protokolleri tıp literatüründe henüz tam olarak aydınlatılmamıştır."""},
         
     "Endolimax nana": "BİLGİ: En küçük bağırsak amibi. Kisti 4 çekirdekli ve ovaldir. Non-patojen.",
     "Iodamoeba bütschlii": "BİLGİ: Kistinde iyot ile boyanan çok büyük bir glikojen vakuolü bulunur. Non-patojen.",
