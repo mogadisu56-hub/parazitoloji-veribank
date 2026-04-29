@@ -204,26 +204,72 @@ with ana_sekme2:
     
     p_kat, h_kat, a_kat = st.columns(3)
 
+    # Yardımcı Fonksiyon: Veri tipine göre içeriği basar
+    def parazit_yazdir(isim):
+        veri = parazit_verisi.get(isim)
+        if veri:
+            with st.expander(isim):
+                if isinstance(veri, dict):
+                    # "bilgi" veya "BİLGİ" anahtarını kontrol et (küçük/büyük harf duyarlılığı için)
+                    icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Detaylı bilgi bulunamadı."
+                    st.write(icerik)
+                else:
+                    st.write(veri)
+
+    # 1. KOLON: PROTOZOONLAR
     with p_kat:
-        with st.expander("🧫 PROTOZOONLAR"):
-            with st.expander("Sarcodina (Amipler)"):
-                # Gösterilmesini istediğiniz parazit listesi
-                amipler = ["Entamoeba histolytica", "Entamoeba dispari", "Entamoeba hartmanni", "Entamoeba coli"]
-                
-                for p_adi in amipler:
-                    with st.expander(p_adi):
-                        # Veriyi güvenli bir şekilde al
-                        veri = parazit_verisi.get(p_adi)
-                        
-                        if veri:
-                            # EĞER VERİ BİR SÖZLÜKSE (bilgi ve resim içeriyorsa)
-                            if isinstance(veri, dict):
-                                st.write(veri.get("bilgi", "Bilgi detayı bulunamadı."))
-                            # EĞER VERİ SADECE DÜZ METİNSE
-                            else:
-                                st.write(veri)
-                        else:
-                            st.warning(f"{p_adi} için henüz veri girişi yapılmadı.")
+        st.markdown("<h4 style='color:#8b0000;'>🧫 PROTOZOONLAR</h4>", unsafe_allow_html=True)
+        
+        with st.expander("Amipler"):
+            amipler = ["Entamoeba histolytica", "Entamoeba dispari", "Entamoeba hartmanni", "Entamoeba coli", 
+                       "Entamoeba polecki", "Endolimax nana", "Iodamoeba bütschlii", "Entamoeba gingivalis", 
+                       "Naegleria fowleri", "Acanthamoeba türleri"]
+            for p in amipler: parazit_yazdir(p)
+
+        with st.expander("Kamçılılar"):
+            kamcililar = ["Giardia intestinalis", "Chilomastix mesnili", "Dientamoeba fragilis", "Trichomonas hominis", 
+                          "Enteromonas hominis", "Retortamonas intestinalis", "Trichomonas tenax", "Trichomonas vaginalis"]
+            for p in kamcililar: parazit_yazdir(p)
+
+        with st.expander("Hemoflagellatlar"):
+            hemo = ["Leishmania braziliensis kompleksi", "Leishmania donovani kompleksi", "Leishmania mexicana kompleksi", 
+                    "Leishmania tropica kompleksi", "Trypanosoma brucei gambiense", "Trypanosoma brucei rhodesiense", 
+                    "Trypanosoma cruzi", "Trypanosoma rangeli"]
+            for p in hemo: parazit_yazdir(p)
+
+        with st.expander("Sporozoonlar & Diğer"):
+            sporo = ["Plasmodium vivax", "Plasmodium ovale", "Plasmodium malariae", "Plasmodium falciparum", 
+                     "Plasmodium knowlesi", "Babesia microti", "Babesia divergens", "Balantidium coli", 
+                     "Isospora belli", "Sarcocystis türleri", "Cryptosporidium parvum", "Blastocystis hominis", 
+                     "Cyclospora cayetanensis", "Microsporidia", "Toxoplasma gondii", "Pneumocystis jirovecii"]
+            for p in sporo: parazit_yazdir(p)
+
+    # 2. KOLON: HELMİNTLER
+    with h_kat:
+        st.markdown("<h4 style='color:#8b0000;'>🐛 HELMİNTLER</h4>", unsafe_allow_html=True)
+        
+        with st.expander("Nematodlar (Yuvarlak)"):
+            nematodlar = ["Enterobius vermicularis", "Trichuris trichiura", "Ascaris lumbricoides", "Necator americanus", 
+                          "Ancylostoma duodenale", "Strongyloides stercoralis", "Trichinella spiralis", "Dracunculus medinensis",
+                          "Wuchereria bancrofti", "Brugia malayi", "Loa loa", "Onchocerca volvulus"]
+            for p in nematodlar: parazit_yazdir(p)
+
+        with st.expander("Sestodlar (Şeritler)"):
+            sestodlar = ["Taenia saginata", "Taenia solium", "Hymenolepis nana", "Hymenolepis diminuta", 
+                         "Diphyllobothrium latum", "Echinococcus granulosus"]
+            for p in sestodlar: parazit_yazdir(p)
+
+        with st.expander("Trematodlar (Yassı)"):
+            trematodlar = ["Fasciola hepatica", "Clonorchis sinensis", "Schistosoma mansoni", "Schistosoma haematobium"]
+            for p in trematodlar: parazit_yazdir(p)
+
+    # 3. KOLON: ARTROPODLAR
+    with a_kat:
+        st.markdown("<h4 style='color:#8b0000;'>🕷️ ARTROPODLAR</h4>", unsafe_allow_html=True)
+        
+        artropodlar = ["Pediculus humanus capitis", "Pthirus pubis", "Lucilia sericata", "Sarcoptes scabiei", 
+                       "Ixodes türleri", "Phlebotomus türleri", "Glossina türleri"]
+        for p in artropodlar: parazit_yazdir(p)
 # --- SEKME 3: PARAZİTOLOJİ AĞACI ---
 with ana_sekme3:
     st.markdown("### 🌳 Parazitoloji Akademik Soy Ağacı")
