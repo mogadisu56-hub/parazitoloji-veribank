@@ -44,7 +44,7 @@ parazit_verisi = {
         Proteolitik enzimler salgılayarak dokuyu istila eder. Bağırsak Amoebiosisi: Amibik Dizanteri: Kanlı-mukuslu dışkılama, karın ağrısı ve tenesmus ile karakterizedir.
         Şişe Biçimli Ülserler: Parazit submukozaya yayılarak tipik kraterimsi, dar ağızlı ülserler oluşturur. 
         Ameboma: Kronik vakalarda bağırsak duvarında tümörle karışabilen inflamatuar kitleler oluşabilir. 
-        Bağırsak Dışı (Ekstraintestinal) Amoebiosis: Parazitin portal dolaşımla diğer organlara yayılmasıdır. En sık karaciğerde (genellikle sağ lopta tek apse) görülür. Apse materyali tipik olarak -ançuez sosu- görünümündedir. 
+        Bağırsak Dışı (Ekstraintestinal) Amoebiosis: Parazitin portal dolaşımla diğer organlara yayılmasıdır. En sık karaciğerde (genellikle sağ lopta tek apse) görülür.
         Bunu akciğer, beyin ve deri tutulumları izleyebilir. 3. Epidemiyoloji ve Bulaşma Bulaşma yolu fekal-oral (dışkı-ağız) yoldur. Kaynak, dışkısıyla kist atan asemptomatik taşıyıcılardır. 
         Kontamine su ve gıdaların tüketilmesi, İnsan dışkısının gübre olarak kullanılması, Karasinek ve hamamböceği gibi vektörler, Kişisel hijyen eksikliği bulaşmada ana rol oynar. 
         4. Tanı Yöntemleri Kesin tanı laboratuvar incelemelerine dayanır. Örneklerin (dışkı, apse materyali, biyopsi) taze incelenmesi kritiktir. 
