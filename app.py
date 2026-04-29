@@ -84,7 +84,7 @@ parazit_verisi = {
      
      •	Trofozoit: 3-12 µm boyutundadır. Endoplazmasında asla eritrosit bulunmaz.
     
-     •	Kist: 4-10 µm boyutundadır. İçerisinde 2-4 adet çekirdek bulunur. Sitoplazması vakuollüdür ve kromatoid cisimcikleri "puro" şeklindedir.
+     •	Kist: 4-10 µm boyutundadır. İçerisinde 2-4 adet çekirdek bulunur. Sitoplazması vakuollüdür ve kromatoid cisimcikleri puro şeklindedir.
      
      •	Patojenite: Apatojen kabul edilir ve genellikle tedavi gerektirmez.
      
@@ -163,7 +163,7 @@ parazit_verisi = {
 
         Tarihsel Karışıklık: Geçmiş literatürde merkezi sinir sisteminde ölümcül enfeksiyonlara yol açtığına dair bazı raporlar yer alsa da, daha sonra yapılan ileri incelemelerde bu vakalardaki etkenlerin aslında Acanthamoeba türleri olduğu kanıtlanmıştır.
 
-        Tanısal Değeri: Dışkıda saptanması, hastanın hijyen standartlarının düşük olduğunu veya kontamine gıda/su tükettiğini gösteren bir indikatör (gösterge) olarak değerlendirilir.""",
+        Tanısal Değeri: Dışkıda saptanması, hastanın hijyen standartlarının düşük olduğunu veya kontamine gıda/su tükettiğini gösteren bir indikatör (gösterge) olarak değerlendirilir."""},
     "Entamoeba gingivalis": {
         "BİLGİ": """ İnsanda saptanan ilk amip olması nedeniyle tarihi bir öneme sahiptir. Özellikle ağız hijyeni zayıf olan bireylerde prevalansı %95'e kadar çıkabilmektedir. 
        
