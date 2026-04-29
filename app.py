@@ -75,7 +75,7 @@ Trofozoit Dönemi Ayırıcı Özellikleri (20-40 µm)
 
 E. coli'nin olgunlaşmamış (4 çekirdekli) kistleri ile E. histolytica'nın olgun kistlerini karıştırmamak için şu **iki noktaya** bakılır:
 Vakuol Varlığı: E. coli'nin 4 çekirdekli kistlerinde genellikle büyük bir glikojen vakuolü bulunur. E. histolytica'nın olgun kistinde ise bu vakuol tüketilmiştir.
-Görülme Sıklığı: E. coli'nin 4 çekirdekli formu dışkıda nadir görülür; genellikle 8 çekirdekli :red[kırmızı] olgun form hakimdir.
+Görülme Sıklığı: E. coli'nin 4 çekirdekli formu dışkıda nadir görülür; genellikle :red[8 çekirdekli] olgun form hakimdir.
 
 **Bulaş ve Epidemiyoloji**
 Bulaş Yolu: 8 veya 16 çekirdekli olgun kistlerin kontamine gıda, su veya kirli eller aracılığıyla (fekal-oral) ağızdan alınmasıyla gerçekleşir.
