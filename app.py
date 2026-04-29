@@ -57,11 +57,11 @@ parazit_verisi = {
         "resim": "parazit_program/Entamoeba_histolytica.png"},
     "Entamoeba dispari": { 
         "BİLGİ": """Entamoeba dispar, morfolojik açıdan Entamoeba histolytica ile birebir benzerlik gösterir. Bu iki tür, mikroskobik incelemelerde (boyalı veya boyasız preparatlarda) yapısal olarak birbirinden ayırt edilemezler.
-    Tanı ve Raporlama StandartlarıKlinik Önem: E. dispar nonpatojen (hastalık yapmayan) bir amip olarak kabul edilirken, E. histolytica invaziv amebiyazis etkenidir. 
-    Yanlış tanı, gereksiz tedavi süreçlerine yol açabileceği için bu iki türün ayrımı kritik önem taşır.Raporlama Dili: Sadece mikroskobik incelemeye dayanarak kesin tür tanımı yapılamaz. 
-    Bu nedenle, morfolojik olarak amip görülen olgular laboratuvar sonuçlarına "Entamoeba histolytica / Entamoeba dispar" (kompleks) şeklinde kaydedilmelidir.
-    Ayırıcı Tanı YöntemleriGünümüzde bu iki türü birbirinden ayırmak için mikroskobi dışındaki ileri tetkikler kullanılmaktadır:YöntemAçıklamaELISA (Antijen Tayini)Adezin antijenine spesifik ELISA testleri ile tür ayrımı hızlıca yapılabilir.
-    PCR (Moleküler Tanı)Tür düzeyinde ayrım sağlayan altın standart yöntemlerden biridir.Real-Time PCREn hassas yöntemdir; sadece E. histolytica ve E. dispar ayrımında değil, diğer nonpatojen amip türlerinin identifikasyonunda da başarıyla uygulanır."""},
+    • Tanı ve Raporlama StandartlarıKlinik Önem: E. dispar nonpatojen (hastalık yapmayan) bir amip olarak kabul edilirken, E. histolytica invaziv amebiyazis etkenidir. 
+    • Yanlış tanı, gereksiz tedavi süreçlerine yol açabileceği için bu iki türün ayrımı kritik önem taşır. 
+    • Raporlama Dili: Sadece mikroskobik incelemeye dayanarak kesin tür tanımı yapılamaz.  Bu nedenle, morfolojik olarak amip görülen olgular laboratuvar sonuçlarına "Entamoeba histolytica / Entamoeba dispar" (kompleks) şeklinde kaydedilmelidir.
+    • Ayırıcı Tanı YöntemleriGünümüzde bu iki türü birbirinden ayırmak için mikroskobi dışındaki ileri tetkikler kullanılmaktadır:YöntemAçıklamaELISA (Antijen Tayini)Adezin antijenine spesifik ELISA testleri ile tür ayrımı hızlıca yapılabilir.
+    •  PCR (Moleküler Tanı)Tür düzeyinde ayrım sağlayan altın standart yöntemlerden biridir.Real-Time PCREn hassas yöntemdir; sadece E. histolytica ve E. dispar ayrımında değil, diğer nonpatojen amip türlerinin identifikasyonunda da başarıyla uygulanır."""},
     "Entamoeba hartmanni": "BİLGİ: Non-patojen amip. E. histolytica'ya benzer ancak daha küçüktür (<10µm).",
     "Entamoeba coli": "MORFOLOJİ: Kist 8 çekirdekli, eksantrik endozom. BİLGİ: Non-patojen bağırsak kommensali.",
     "Entamoeba polecki": "BİLGİ: Domuz/maymun amibi. TANI: Tek çekirdekli kist yapısı karakteristiktir.",
@@ -71,7 +71,7 @@ parazit_verisi = {
         "BİLGİ": """ İnsanda saptanan ilk amip olması nedeniyle tarihi bir öneme sahiptir. Özellikle ağız hijyeni zayıf olan bireylerde prevalansı %95'e kadar çıkabilmektedir. 
         •	Yerleşim: Diş ve diş eti boşlukları, bademcik kriptleri; nadiren vajinal yerleşim (literatürde bildirilmiştir). 
         •	Morfoloji: Hayat döngüsünde sadece trofozoit formu bilinmektedir (kist formu yoktur). o	Boyut: Genellikle 7-20 µm (bazen 35 µm'ye kadar çıkabilir). o	Hareket: Hızlı hareket eder; E. histolytica'ya benzer. 
-        o	İçerik: Besin vakuolleri içinde bakteri, lökosit, epitel hücresi ve nadiren eritrosit bulunur. •	Patojenite: Genellikle apatojen kabul edilir; ancak diş çürümelerine zemin hazırladığı düşünülmektedir. 
+        •	İçerik: Besin vakuolleri içinde bakteri, lökosit, epitel hücresi ve nadiren eritrosit bulunur. •	Patojenite: Genellikle apatojen kabul edilir; ancak diş çürümelerine zemin hazırladığı düşünülmektedir. 
         •	Bulaş: Trofozoit formuyla; öpüşme, damlacık enfeksiyonu veya ortak mutfak eşyası kullanımı (çatal, kaşık, bardak) ile doğrudan bulaşır."""},
     "Naegleria fowleri": "BİLGİ: PAM (Primer Amibik Meningoensefalit) etkeni. Burun yoluyla MSS'ye girer.",
     "Acanthamoeba türleri": "BİLGİ: Keratit (lens kullanıcıları) ve GAE etkeni. Çift çeperli kist yapısı.",
