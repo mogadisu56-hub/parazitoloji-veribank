@@ -223,7 +223,7 @@ with ana_sekme2:
         Bunu akciğer, beyin ve deri tutulumları izleyebilir. 3. Epidemiyoloji ve Bulaşma Bulaşma yolu fekal-oral (dışkı-ağız) yoldur. Kaynak, dışkısıyla kist atan asemptomatik taşıyıcılardır. 
         Kontamine su ve gıdaların tüketilmesi, İnsan dışkısının gübre olarak kullanılması, Karasinek ve hamamböceği gibi vektörler, Kişisel hijyen eksikliği bulaşmada ana rol oynar. 
         4. Tanı Yöntemleri Kesin tanı laboratuvar incelemelerine dayanır. Örneklerin (dışkı, apse materyali, biyopsi) taze incelenmesi kritiktir. 
-        Mikroskopi: Dışkıda trofozoit (taze/sulu dışkıda) veya kist (şekilli dışkıda) aranır. Lugol veya kalıcı boyalar (Trikrom, Hematoksilen) kullanılır. Seroloji: Bağırsak dışı amoebiosis vakalarının %95'inde antikor testleri (ELISA, IHA) pozitiftir.
+        Mikroskopi: Dışkıda trofozoit (taze/sulu dışkıda) veya kist (şekilli dışkıda) aranır. Lugol veya kalıcı boyalar (Trikrom, Hematoksilen) kullanılır. Seroloji: Bağırsak dışı amoebiosis vakalarının %95 inde antikor testleri (ELISA, IHA) pozitiftir.
         Antijen ve Moleküler Testler: Dışkıda antijen arayan ELISA kitleri ve PCR yöntemleri, E. histolytica ile patojen olmayan E. dispar ayrımı için altın standarttır. 
         Görüntüleme: Karaciğer apsesi şüphesinde USG, BT ve MR kullanılır. 5. Tedavi ve Kontrol Tedavi, hastalığın şiddetine ve yerleşimine göre planlanır: 
         İlaç Tedavisi: İnvaziv Enfeksiyonlar: Metronidazol (en yaygın), tinidazol veya ornidazol. Luminal (Taşıyıcılık) Tedavisi: Paromomisin, iyodokinol veya diloksanid furoat. Gebelikte: Paromomisin güvenli bir seçenektir. 
