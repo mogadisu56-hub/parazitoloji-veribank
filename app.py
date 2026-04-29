@@ -211,58 +211,77 @@ with ana_sekme1:
         else:
             st.error("Kayıt bulunamadı.")
 
-# --- SEKME 2: SINIFLANDIRMA (HIYERARŞİK) ---
+# --- SEKME 2: DErs Notları  ---
 with ana_sekme2:
-    st.markdown("### 📚 Sistematik Sınıflandırma")
+    st.markdown("### 🔬 Parazitoloji Akademik Bilgi Paneli")
     
-    p_kat, h_kat, a_kat = st.columns(3)
+    # Sayfayı iki ana sütuna ayırıyoruz: Sol (Hiyerarşik Liste) ve Sağ (Geniş Detaylar)
+    col_liste, col_detay = st.columns([1, 2])
 
-    # Yardımcı Fonksiyon: Veri tipine göre içeriği basar
-    def parazit_yazdir(isim):
-        veri = parazit_verisi.get(isim)
-        if veri:
-            with st.expander(isim):
-                if isinstance(veri, dict):
-                    # "bilgi" veya "BİLGİ" anahtarını kontrol et (küçük/büyük harf duyarlılığı için)
-                    icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Detaylı bilgi bulunamadı."
-                    st.write(icerik)
-                else:
-                    st.write(veri)
-
-    # 1. KOLON: PROTOZOONLAR (Görseldeki Hiyerarşiye Göre)
-    with p_kat:
-        st.markdown("<h4 style='color:#8b0000;'>🧫 PROTOZOONLAR</h4>", unsafe_allow_html=True)
+    with col_liste:
+        st.info("Parazit Seçiniz")
         
-        # --- 1- SARCOMASTIGOPHORA ---
-        with st.expander("1- SARCOMASTIGOPHORA"):
-            
-            # A- SARCODINA
-            st.markdown("<p style='font-weight:bold; color:#8b0000; margin-bottom:5px;'>A- SARCODINA</p>", unsafe_allow_html=True)
-            with st.expander("Amipler"):
-                amipler = ["Entamoeba histolytica", "Entamoeba dispari", "Entamoeba polecki", "Entamoeba coli", 
-                           "Endolimax nana", "Iodamoeba bütschlii", "Entamoeba hartmanni", "Entamoeba gingivalis"]
-                for p in amipler: parazit_yazdir(p)
-            
-            with st.expander("Serbest Yaşayan Amipler"):
-                serbest = ["Naegleria fowleri", "Acanthamoeba türleri"] # Balamuthia ve Sappinia veride varsa eklenir
-                for p in serbest: parazit_yazdir(p)
-                st.caption("Not: Balamuthia türleri ve Sappinia pedata")
+        # 1. Aşama: Ana Grup Seçimi
+        ana_grup = st.selectbox("Ana Kategori:", [
+            "PROTOZOONLAR", 
+            "HELMİNTLER", 
+            "ARTROPODLAR"
+        ])
 
-            st.divider()
+        # 2. Aşama: Alt Grup ve Parazit Listesi Tanımlama
+        if ana_grup == "PROTOZOONLAR":
+            alt_grup = st.radio("Sınıflandırma:", ["Sarcodina (Amipler)", "Mastigophora (Kamçılılar)", "Apicomplexa", "Ciliophora & Diğer"])
+            if "Amipler" in alt_grup:
+                liste = ["Entamoeba histolytica", "Entamoeba dispari", "Entamoeba polecki", "Entamoeba coli", "Endolimax nana", "Iodamoeba bütschlii", "Entamoeba hartmanni", "Entamoeba gingivalis", "Naegleria fowleri", "Acanthamoeba türleri"]
+            elif "Kamçılılar" in alt_grup:
+                liste = ["Giardia intestinalis", "Trichomonas tenax", "Trichomonas hominis", "Chilomastix mesnili", "Dientamoeba fragilis", "Retortamonas intestinalis", "Enteromonas hominis", "Trichomonas vaginalis", "Leishmania tropica kompleksi", "Leishmania donovani kompleksi", "Trypanosoma cruzi", "Trypanosoma brucei gambiense"]
+            elif "Apicomplexa" in alt_grup:
+                liste = ["Plasmodium vivax", "Plasmodium falciparum", "Babesia microti", "Toxoplasma gondii", "Isospora belli", "Cryptosporidium parvum", "Cyclospora cayetanensis", "Sarcocystis türleri"]
+            else:
+                liste = ["Balantidium coli", "Blastocystis hominis", "Microsporidia", "Pneumocystis jirovecii"]
 
-            # B- MASTIGOPHORA
-            st.markdown("<p style='font-weight:bold; color:#8b0000; margin-bottom:5px;'>B- MASTIGOPHORA (Kamçılılar)</p>", unsafe_allow_html=True)
-            with st.expander("Sindirim Sistemi Kamçılıları"):
-                sindirim = ["Giardia intestinalis", "Trichomonas tenax", "Trichomonas hominis", "Chilomastix mesnili", 
-                            "Dientamoeba fragilis", "Retortamonas intestinalis", "Enteromonas hominis"]
-                for p in sindirim: parazit_yazdir(p)
+        elif ana_grup == "HELMİNTLER":
+            alt_grup = st.radio("Sınıflandırma:", ["Nematodlar", "Sestodlar", "Trematodlar"])
+            if "Nematod" in alt_grup:
+                liste = ["Enterobius vermicularis", "Trichuris trichiura", "Ascaris lumbricoides", "Necator americanus", "Ancylostoma duodenale", "Strongyloides stercoralis", "Trichinella spiralis", "Dracunculus medinensis", "Wuchereria bancrofti", "Brugia malayi", "Loa loa", "Onchocerca volvulus"]
+            elif "Sestod" in alt_grup:
+                liste = ["Taenia saginata", "Taenia solium", "Hymenolepis nana", "Hymenolepis diminuta", "Diphyllobothrium latum", "Echinococcus granulosus"]
+            else:
+                liste = ["Fasciola hepatica", "Clonorchis sinensis", "Schistosoma mansoni", "Schistosoma haematobium"]
+
+        else: # ARTROPODLAR
+            liste = ["Pediculus humanus capitis", "Pthirus pubis", "Lucilia sericata", "Sarcoptes scabiei", "Ixodes türleri", "Phlebotomus türleri", "Glossina türleri"]
+
+        # Parazit Seçimi
+        secilen_parazit = st.selectbox("Parazit Seçin:", liste)
+
+    with col_detay:
+        if secilen_parazit:
+            veri = parazit_verisi.get(secilen_parazit)
             
-            with st.expander("Ürogenital Sistem Kamçılıları"):
-                parazit_yazdir("Trichomonas vaginalis")
+            # Sağ panel başlığı ve şık bir çizgi
+            st.markdown(f"<h2 style='color:#8b0000; border-bottom: 3px solid #8b0000;'>{secilen_parazit}</h2>", unsafe_allow_html=True)
             
-            with st.expander("Kan ve Doku Kamçılıları"):
-                kandoku = ["Leishmania tropica kompleksi", "Leishmania donovani kompleksi", "Trypanosoma cruzi", "Trypanosoma brucei gambiense"]
-                for p in kandoku: parazit_yazdir(p)
+            if veri:
+                # İçerik Alanı - Beyaz bir kart görünümü veriyoruz
+                with st.container():
+                    if isinstance(veri, dict):
+                        # Metin içeriği
+                        icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Detaylı bilgi girişi yapılıyor..."
+                        st.markdown(f"<div style='background-color: white; padding: 20px; border-radius: 10px; border-left: 5px solid #8b0000; color: #333;'>{icerik}</div>", unsafe_allow_html=True)
+                        
+                        # Resim Bölümü
+                        resim_yolu = veri.get("resim")
+                        if resim_yolu and os.path.exists(resim_yolu):
+                            st.divider()
+                            st.image(resim_yolu, caption=f"{secilen_parazit} Laboratuvar Görüntüsü", use_container_width=True)
+                    else:
+                        # Sözlük yapısında olmayan basit veriler için
+                        st.markdown(f"<div style='background-color: #f0f2f6; padding: 20px; border-radius: 10px;'>{veri}</div>", unsafe_allow_html=True)
+            else:
+                st.warning("Bu parazit için henüz detaylı veri girişi yapılmadı.")
+            
+            st.caption(f"KAEÜ Tıp Fakültesi Tıbbi Parazitoloji Veri Bankası • {secilen_parazit}")
 
         # --- 2- APICOMPLEXA ---
         with st.expander("2- APICOMPLEXA"):
