@@ -66,15 +66,18 @@ Bulaşma yolu fekal-oral (dışkı-ağız) yoldur. Kontamine su ve gıdalar, kir
 **Ayırıcı Tanı:** Morfolojik olarak patojen olan E. histolytica ile sıklıkla karıştırılması.
 
 **Hijyen İndikatörü:** Saptanması, hastanın fekal kontaminasyona (sanitasyon eksikliği) maruz kaldığının kesin bir göstergesidir.
+
 Trofozoit Dönemi Ayırıcı Özellikleri (20-40 µm)
-E. coli trofozoitini E. histolytica'dan ayıran temel farklar şunlardır:
-Hareket: Çok yavaştır; ektoplazma ve endoplazma ayrımı belirgin değildir.
-Sitoplazma İçeriği: Endoplazmasında asla eritrosit bulunmaz (sadece bakteri ve artıklar görülür).
-Çekirdek Yapısı: Boyalı preparatlarda karyozom (çekirdekçik) asantral (merkez dışı) yerleşimlidir. Çekirdek zarı üzerindeki kromatin tanecikleri düzensiz ve kaba dizilmiştir. Dört Çekirdekli Kistlerin Ayrımı
-E. coli'nin olgunlaşmamış (4 çekirdekli) kistleri ile E. histolytica'nın olgun kistlerini karıştırmamak için şu iki noktaya bakılır:
+**E. coli trofozoitini E. histolytica'dan ayıran temel farklar şunlardır:**
+**Hareket:** Çok yavaştır; ektoplazma ve endoplazma ayrımı belirgin değildir.
+**Sitoplazma İçeriği:** Endoplazmasında asla eritrosit bulunmaz (sadece bakteri ve artıklar görülür).
+**Çekirdek Yapısı:** Boyalı preparatlarda karyozom (çekirdekçik) asantral (merkez dışı) yerleşimlidir. Çekirdek zarı üzerindeki kromatin tanecikleri düzensiz ve kaba dizilmiştir. Dört Çekirdekli Kistlerin Ayrımı
+
+E. coli'nin olgunlaşmamış (4 çekirdekli) kistleri ile E. histolytica'nın olgun kistlerini karıştırmamak için şu **iki noktaya** bakılır:
 Vakuol Varlığı: E. coli'nin 4 çekirdekli kistlerinde genellikle büyük bir glikojen vakuolü bulunur. E. histolytica'nın olgun kistinde ise bu vakuol tüketilmiştir.
 Görülme Sıklığı: E. coli'nin 4 çekirdekli formu dışkıda nadir görülür; genellikle 8 çekirdekli olgun form hakimdir.
-Bulaş ve Epidemiyoloji
+
+**Bulaş ve Epidemiyoloji**
 Bulaş Yolu: 8 veya 16 çekirdekli olgun kistlerin kontamine gıda, su veya kirli eller aracılığıyla (fekal-oral) ağızdan alınmasıyla gerçekleşir.
 Çevresel Direnç: E. coli kistleri dış çevre koşullarına E. histolytica'dan çok daha dirençlidir. Bu nedenle saha taramalarında E. coli görülme sıklığı, E. histolytica'dan en az iki kat daha fazladır."""
     },
