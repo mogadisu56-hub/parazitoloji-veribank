@@ -491,5 +491,4 @@ with ana_sekme2:
 
 # --- FOOTER ---
 st.markdown("---")
-st.markdown("Bu bir <span style='color:red'>kırmızı kelime</span> ve bu bir <span style='color:blue'>mavi kelime</span> örneğidir.", unsafe_allow_html=True)
 st.caption("© 2026 Kırşehir Ahi Evran Üniversitesi Tıp Fakültesi - Tıbbi Parazitoloji Anabilim Dalı")
