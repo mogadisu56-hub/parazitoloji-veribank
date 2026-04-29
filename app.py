@@ -230,7 +230,7 @@ with ana_sekme2:
                         st.write("- abc")
                     with st.expander("Balantidium coli"):
                         st.write("- ABC")
-                with st.expander("Serbest Yaşayanlar Amipler)":
+                with st.expander("Serbest Yaşayanlar Amipler)":)
                     st.write("- Entamoeba histolytica / dispar\n- Entamoeba hartmanni\n- Entamoeba coli\n-Entamoeba polecki\n-Endolimax nana\n-Iodamoeba bütschlii\n-Entamoeba gingivalis")
                     st.write("- Naegleria fowleri\n- Acanthamoeba türleri\n-  Balamuthia\n- Sappinia pedata")
                 with st.expander("Mastigophora (Kamçılılar)"):
