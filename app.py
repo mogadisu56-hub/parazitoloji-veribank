@@ -36,39 +36,59 @@ parazit_verisi = {
     "Entamoeba histolytica": {
         "bilgi": """Entamoeba histolytica ve Amoebiosis Entamoeba histolytica, dünya genelinde (özellikle tropikal bölgelerde) yaygın görülen, patojenik ve tek hücreli bir anaerop protozoondur. 
         İnsanlarda asemptomatik taşıyıcılıktan ölümcül dizanteriye ve karaciğer apselerine kadar geniş bir klinik yelpazeye neden olur. 
+        
         1. Morfoloji ve Hayat Döngüsü Parazitin hayat döngüsü; trofozoit, prekist, kist, metakist ve metakistik trofozoit evrelerinden oluşur. 
         Trofozoit: Aktif hareket eden, beslenen ve çoğalan formdur. Lobopod adı verilen yalancı ayaklarla hareket eder. Sitoplazmasında fagosite edilmiş alyuvarlar (eritrosit) bulunabilir; bu özellik teşhiste önemlidir.
         Kist: Parazitin dış ortama ve mide asidine dirençli, enfektif formudur. Olgun kist 4 çekirdeklidir. İçerisinde uçları yuvarlak kromatoid cisimcikler bulunur (bu özellik E. coli'den ayrımını sağlar).
         Döngü: Ağız yoluyla alınan 4 çekirdekli olgun kistler, ince bağırsakta kist duvarının parçalanmasıyla metakistik trofozoitlere dönüşür. 
-        Bunlar kalın bağırsağa (özellikle çekum ve rekto-sigmoidal bölgeye) yerleşerek kolonize olurlar. 2. Patogenez ve Klinik Belirtiler Parazit, yüzeyindeki Gal/GalNAc lektin aracılığıyla bağırsak epiteline yapışır. 
+        Bunlar kalın bağırsağa (özellikle çekum ve rekto-sigmoidal bölgeye) yerleşerek kolonize olurlar.
+        
+        2. Patogenez ve Klinik Belirtiler Parazit, yüzeyindeki Gal/GalNAc lektin aracılığıyla bağırsak epiteline yapışır. 
         Proteolitik enzimler salgılayarak dokuyu istila eder. Bağırsak Amoebiosisi: Amibik Dizanteri: Kanlı-mukuslu dışkılama, karın ağrısı ve tenesmus ile karakterizedir.
         Şişe Biçimli Ülserler: Parazit submukozaya yayılarak tipik kraterimsi, dar ağızlı ülserler oluşturur. 
         Ameboma: Kronik vakalarda bağırsak duvarında tümörle karışabilen inflamatuar kitleler oluşabilir. 
         Bağırsak Dışı (Ekstraintestinal) Amoebiosis: Parazitin portal dolaşımla diğer organlara yayılmasıdır. En sık karaciğerde (genellikle sağ lopta tek apse) görülür.
-        Bunu akciğer, beyin ve deri tutulumları izleyebilir. 3. Epidemiyoloji ve Bulaşma Bulaşma yolu fekal-oral (dışkı-ağız) yoldur. Kaynak, dışkısıyla kist atan asemptomatik taşıyıcılardır. 
+        Bunu akciğer, beyin ve deri tutulumları izleyebilir. 
+        
+        3. Epidemiyoloji ve Bulaşma Bulaşma yolu fekal-oral (dışkı-ağız) yoldur. Kaynak, dışkısıyla kist atan asemptomatik taşıyıcılardır. 
         Kontamine su ve gıdaların tüketilmesi, İnsan dışkısının gübre olarak kullanılması, Karasinek ve hamamböceği gibi vektörler, Kişisel hijyen eksikliği bulaşmada ana rol oynar. 
+       
         4. Tanı Yöntemleri Kesin tanı laboratuvar incelemelerine dayanır. Örneklerin (dışkı, apse materyali, biyopsi) taze incelenmesi kritiktir. 
         Mikroskopi: Dışkıda trofozoit (taze/sulu dışkıda) veya kist (şekilli dışkıda) aranır. Lugol veya kalıcı boyalar (Trikrom, Hematoksilen) kullanılır. Seroloji: Bağırsak dışı amoebiosis vakalarının %95'inde antikor testleri (ELISA, IHA) pozitiftir.
         Antijen ve Moleküler Testler: Dışkıda antijen arayan ELISA kitleri ve PCR yöntemleri, E. histolytica ile patojen olmayan E. dispar ayrımı için altın standarttır. 
-        Görüntüleme: Karaciğer apsesi şüphesinde USG, BT ve MR kullanılır. 5. Tedavi ve Kontrol Tedavi, hastalığın şiddetine ve yerleşimine göre planlanır: 
+        Görüntüleme: Karaciğer apsesi şüphesinde USG, BT ve MR kullanılır.
+        
+        5. Tedavi ve Kontrol Tedavi, hastalığın şiddetine ve yerleşimine göre planlanır: 
         İlaç Tedavisi: İnvaziv Enfeksiyonlar: Metronidazol (en yaygın), tinidazol veya ornidazol. Luminal (Taşıyıcılık) Tedavisi: Paromomisin, iyodokinol veya diloksanid furoat. Gebelikte: Paromomisin güvenli bir seçenektir. 
         Cerrahi: Perforasyon, şiddetli kanama veya ilaç tedavisine yanıt vermeyen büyük karaciğer apselerinde (özellikle sol lop yerleşimli rüptür riski olanlar) drenaj veya cerrahi müdahale gerekebilir. 
         Korunma: Temiz içme suyu sağlanması, kanalizasyon altyapısının iyileştirilmesi, gıda sektöründe çalışanların periyodik kontrolü ve el yıkama alışkanlığının yaygınlaştırılması temel korunma yollarıdır.""",
         "resim": "parazit_program/Entamoeba_histolytica.png"},
     "Entamoeba dispar": { 
         "BİLGİ": """Entamoeba dispar, morfolojik açıdan Entamoeba histolytica ile birebir benzerlik gösterir. Bu iki tür, mikroskobik incelemelerde (boyalı veya boyasız preparatlarda) yapısal olarak birbirinden ayırt edilemezler.
+    
     • Tanı ve Raporlama Standartları Klinik Önem: E. dispar nonpatojen (hastalık yapmayan) bir amip olarak kabul edilirken, E. histolytica invaziv amebiyazis etkenidir. 
+    
     • Yanlış tanı, gereksiz tedavi süreçlerine yol açabileceği için bu iki türün ayrımı kritik önem taşır. 
+    
     • Raporlama Dili: Sadece mikroskobik incelemeye dayanarak kesin tür tanımı yapılamaz.  Bu nedenle, morfolojik olarak amip görülen olgular laboratuvar sonuçlarına "Entamoeba histolytica / Entamoeba dispar" (kompleks) şeklinde kaydedilmelidir.
+   
     • Ayırıcı Tanı YöntemleriGünümüzde bu iki türü birbirinden ayırmak için mikroskobi dışındaki ileri tetkikler kullanılmaktadır: Yöntem Açıklama ELISA (Antijen Tayini)Adezin antijenine spesifik ELISA testleri ile tür ayrımı hızlıca yapılabilir.
+    
     •  PCR (Moleküler Tanı)Tür düzeyinde ayrım sağlayan altın standart yöntemlerden biridir. Real-Time PCREn hassas yöntemdir; sadece E. histolytica ve E. dispar ayrımında değil, diğer nonpatojen amip türlerinin identifikasyonunda da başarıyla uygulanır."""},
     "Entamoeba hartmanni": {
         "BİLGİ": """Eskiden E. histolytica'nın "küçük formu" olarak tanımlanan bu tür, morfolojik olarak benzer olsa da boyutlarıyla ondan ayrılır.
+    
      •	Yerleşim: Kalın bağırsak.
+     
      •	Morfoloji:
+     
      •	Trofozoit: 3-12 µm boyutundadır. Endoplazmasında asla eritrosit bulunmaz.
+    
      •	Kist: 4-10 µm boyutundadır. İçerisinde 2-4 adet çekirdek bulunur. Sitoplazması vakuollüdür ve kromatoid cisimcikleri "puro" şeklindedir.
+     
      •	Patojenite: Apatojen kabul edilir ve genellikle tedavi gerektirmez.
+     
+     
      •	Görülme: Dünya genelinde ve Türkiye'de rastlanmaktadır.
 """},
     "Entamoeba coli": "MORFOLOJİ: Kist 8 çekirdekli, eksantrik endozom. BİLGİ: Non-patojen bağırsak kommensali.",
@@ -78,29 +98,81 @@ parazit_verisi = {
 Epidemiyoloji ve Konakçılık
 Asıl Konakçı: Domuzlar ve maymunlar.
 
-İnsan Yerleşimi: Domuz yetiştiricileri ve bu hayvanlarla yakın temasta bulunan kişilerin kalın bağırsaklarında yerleşir.
+• İnsan Yerleşimi: Domuz yetiştiricileri ve bu hayvanlarla yakın temasta bulunan kişilerin kalın bağırsaklarında yerleşir.
 
-Yayılım: Papua Yeni Gine'nin belirli bölgelerinde yüksek prevalans göstermektedir. Türkiye'de henüz resmi bir olgu rapor edilmemiştir.
+• Yayılım: Papua Yeni Gine'nin belirli bölgelerinde yüksek prevalans göstermektedir. Türkiye'de henüz resmi bir olgu rapor edilmemiştir.
 
-Morfolojik Özellikler
+• Morfolojik Özellikler
 Trofozoit: Yapısal olarak Entamoeba coli'ye büyük benzerlik gösterir; bu durum tanı aşamasında karışıklıklara yol açabilir.
 
 Kist: Tipik olarak tek çekirdeklidir. Nadir durumlarda iki veya dört çekirdekli formlarına da rastlanabilir.
 
 Kromatoid Cisimcikler: Morfolojik açıdan Entamoeba histolytica ile benzerlik taşır.
 
-Klinik Durum ve Patojenite
-Patojenite: İnsanlar için patojen olarak kabul edilmektedir.
+• Klinik Durum ve Patojenite
+• Patojenite: İnsanlar için patojen olarak kabul edilmektedir.
 
-Tedavi ve Takip: Patogenezi ve standart tedavi protokolleri tıp literatüründe henüz tam olarak aydınlatılmamıştır."""},
+• Tedavi ve Takip: Patogenezi ve standart tedavi protokolleri tıp literatüründe henüz tam olarak aydınlatılmamıştır."""},
         
-    "Endolimax nana": "BİLGİ: En küçük bağırsak amibi. Kisti 4 çekirdekli ve ovaldir. Non-patojen.",
-    "Iodamoeba bütschlii": "BİLGİ: Kistinde iyot ile boyanan çok büyük bir glikojen vakuolü bulunur. Non-patojen.",
+    "Endolimax nana": {
+        "BİLGİ": """insan kalın bağırsağında kommensal olarak yaşayan ve klinik olarak apatojen (hastalık yapmayan) kabul edilen bir protozoondur. Türün hem trofozoit hem de kist aşamaları mevcuttur.
+
+1. Trofozoit Dönemi
+Boyut: Yaklaşık 5-12 µm aralığındadır.
+
+Hareket: Hareket yeteneği sınırlıdır ve oldukça yavaştır.
+
+Morfoloji: Endoplazma ve ektoplazma ayrımı belirgin değildir. Endoplazma içinde asla eritrosit görülmez (bu özellik E. histolytica ayrımında önemlidir).
+
+Çekirdek Yapısı: Türün en tipik özelliği çekirdeğidir. Çekirdek içinde büyük, düzensiz sınırlı ve merkezi (santral) ya da merkeze yakın (asantral) konumlanmış bir karyozom bulunur.
+
+2. Kist Dönemi
+Boyut: Trofozoit ile benzer büyüklüktedir (5-14 µm).
+
+Şekil: Genellikle oval bir yapıya sahiptir; bazen yuvarlak veya küresel formda görülebilir.
+
+Çekirdek Sayısı: Olgunlaşmış kistlerde genellikle dört adet çekirdek bulunur (genç formlarda tek çekirdek görülebilir). Boyalı preparatlarda bu çekirdekler belirginleşir.
+
+Klinik ve Epidemiyolojik Durum
+Patojenite: Apatojen olarak sınıflandırılır; ancak dışkı örneklerinde saptanması, hastanın fekal kontaminasyona (hijyen eksikliği veya kirli su/gıda tüketimi) maruz kaldığının bir göstergesidir.
+
+Yayılım: Dünya genelinde yaygındır ve Türkiye'de de sıkça rastlanan bir amip türüdür."""},
+    "Iodamoeba bütschlii": {
+        "BİLGİ":  """insan kalın bağırsağında yaşayan ve adını kist evresindeki belirgin iyot tutulumundan alan bir protozoondur. Genellikle apatojen olarak kabul edilmekle birlikte, mikrobiyolojik tanıda diğer patojen türlerle karıştırılmaması açısından önemlidir.
+
+1. Kist Dönemi (En Tipik Formu)
+Kist formu, bu türün tanısında en ayırt edici evredir:
+
+Glikojen Vakuolü: Cins ismini (Iodamoeba), kist içinde bulunan ve neredeyse tüm sitoplazmayı kaplayan büyük, sınırları net glikojen vakuolünden alır.
+
+Boyanma Özelliği: Bu vakuol, iyot çözeltisi (Lugol) ile boyandığında koyu kahverengi bir renk alır ve mikroskop altında kolayca seçilir.
+
+Boyut ve Şekil: 6-16 µm çapındadır; oval, yuvarlak veya düzensiz (üçgenimsi) şekillerde görülebilir.
+
+Çekirdek: Genellikle tek çekirdeklidir ancak kist içinde görülmesi oldukça zordur. Kromatoid cisimcikler bu türde bulunmaz.
+
+2. Trofozoit Dönemi
+Boyut: 4-20 µm çapındadır.
+
+Mikroskobik Görünüm: Boyanmamış (nativ) preparatlarda çekirdeği görmek ve tür tayini yapmak neredeyse imkansızdır. Hareketleri yavaştır ve endoplazmasında eritrosit bulunmaz.
+
+Boyalı İnceleme: Özel boyalarla bakıldığında, ince bir çekirdek zarı ve bu zarın ortasında yer alan oldukça büyük bir çekirdekçik (karyozom) gözlemlenir.
+
+3. Klinik Önem ve Patojenite
+Genel Görüş: Çoğunlukla apatojen (hastalık yapmayan) olarak kabul edilir.
+
+Tarihsel Karışıklık: Geçmiş literatürde merkezi sinir sisteminde ölümcül enfeksiyonlara yol açtığına dair bazı raporlar yer alsa da, daha sonra yapılan ileri incelemelerde bu vakalardaki etkenlerin aslında Acanthamoeba türleri olduğu kanıtlanmıştır.
+
+Tanısal Değeri: Dışkıda saptanması, hastanın hijyen standartlarının düşük olduğunu veya kontamine gıda/su tükettiğini gösteren bir indikatör (gösterge) olarak değerlendirilir.""",
     "Entamoeba gingivalis": {
         "BİLGİ": """ İnsanda saptanan ilk amip olması nedeniyle tarihi bir öneme sahiptir. Özellikle ağız hijyeni zayıf olan bireylerde prevalansı %95'e kadar çıkabilmektedir. 
+       
         •	Yerleşim: Diş ve diş eti boşlukları, bademcik kriptleri; nadiren vajinal yerleşim (literatürde bildirilmiştir). 
+       
         •	Morfoloji: Hayat döngüsünde sadece trofozoit formu bilinmektedir (kist formu yoktur). o	Boyut: Genellikle 7-20 µm (bazen 35 µm'ye kadar çıkabilir). o	Hareket: Hızlı hareket eder; E. histolytica'ya benzer. 
+       
         •	İçerik: Besin vakuolleri içinde bakteri, lökosit, epitel hücresi ve nadiren eritrosit bulunur. •	Patojenite: Genellikle apatojen kabul edilir; ancak diş çürümelerine zemin hazırladığı düşünülmektedir. 
+       
         •	Bulaş: Trofozoit formuyla; öpüşme, damlacık enfeksiyonu veya ortak mutfak eşyası kullanımı (çatal, kaşık, bardak) ile doğrudan bulaşır."""},
     "Naegleria fowleri": "BİLGİ: PAM (Primer Amibik Meningoensefalit) etkeni. Burun yoluyla MSS'ye girer.",
     "Acanthamoeba türleri": "BİLGİ: Keratit (lens kullanıcıları) ve GAE etkeni. Çift çeperli kist yapısı.",
