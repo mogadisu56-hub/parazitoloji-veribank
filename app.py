@@ -55,14 +55,22 @@ parazit_verisi = {
         Cerrahi: Perforasyon, şiddetli kanama veya ilaç tedavisine yanıt vermeyen büyük karaciğer apselerinde (özellikle sol lop yerleşimli rüptür riski olanlar) drenaj veya cerrahi müdahale gerekebilir. 
         Korunma: Temiz içme suyu sağlanması, kanalizasyon altyapısının iyileştirilmesi, gıda sektöründe çalışanların periyodik kontrolü ve el yıkama alışkanlığının yaygınlaştırılması temel korunma yollarıdır.""",
         "resim": "parazit_program/Entamoeba_histolytica.png"},
-    "Entamoeba dispari": { 
+    "Entamoeba dispar": { 
         "BİLGİ": """Entamoeba dispar, morfolojik açıdan Entamoeba histolytica ile birebir benzerlik gösterir. Bu iki tür, mikroskobik incelemelerde (boyalı veya boyasız preparatlarda) yapısal olarak birbirinden ayırt edilemezler.
-    • Tanı ve Raporlama StandartlarıKlinik Önem: E. dispar nonpatojen (hastalık yapmayan) bir amip olarak kabul edilirken, E. histolytica invaziv amebiyazis etkenidir. 
+    • Tanı ve Raporlama Standartları Klinik Önem: E. dispar nonpatojen (hastalık yapmayan) bir amip olarak kabul edilirken, E. histolytica invaziv amebiyazis etkenidir. 
     • Yanlış tanı, gereksiz tedavi süreçlerine yol açabileceği için bu iki türün ayrımı kritik önem taşır. 
     • Raporlama Dili: Sadece mikroskobik incelemeye dayanarak kesin tür tanımı yapılamaz.  Bu nedenle, morfolojik olarak amip görülen olgular laboratuvar sonuçlarına "Entamoeba histolytica / Entamoeba dispar" (kompleks) şeklinde kaydedilmelidir.
-    • Ayırıcı Tanı YöntemleriGünümüzde bu iki türü birbirinden ayırmak için mikroskobi dışındaki ileri tetkikler kullanılmaktadır:YöntemAçıklamaELISA (Antijen Tayini)Adezin antijenine spesifik ELISA testleri ile tür ayrımı hızlıca yapılabilir.
-    •  PCR (Moleküler Tanı)Tür düzeyinde ayrım sağlayan altın standart yöntemlerden biridir.Real-Time PCREn hassas yöntemdir; sadece E. histolytica ve E. dispar ayrımında değil, diğer nonpatojen amip türlerinin identifikasyonunda da başarıyla uygulanır."""},
-    "Entamoeba hartmanni": "BİLGİ: Non-patojen amip. E. histolytica'ya benzer ancak daha küçüktür (<10µm).",
+    • Ayırıcı Tanı YöntemleriGünümüzde bu iki türü birbirinden ayırmak için mikroskobi dışındaki ileri tetkikler kullanılmaktadır: Yöntem Açıklama ELISA (Antijen Tayini)Adezin antijenine spesifik ELISA testleri ile tür ayrımı hızlıca yapılabilir.
+    •  PCR (Moleküler Tanı)Tür düzeyinde ayrım sağlayan altın standart yöntemlerden biridir. Real-Time PCREn hassas yöntemdir; sadece E. histolytica ve E. dispar ayrımında değil, diğer nonpatojen amip türlerinin identifikasyonunda da başarıyla uygulanır."""},
+    "Entamoeba hartmanni": {
+        "BİLGİ": """Eskiden E. histolytica'nın "küçük formu" olarak tanımlanan bu tür, morfolojik olarak benzer olsa da boyutlarıyla ondan ayrılır.
+     •	Yerleşim: Kalın bağırsak.
+     •	Morfoloji:
+     •	Trofozoit: 3-12 µm boyutundadır. Endoplazmasında asla eritrosit bulunmaz.
+     •	Kist: 4-10 µm boyutundadır. İçerisinde 2-4 adet çekirdek bulunur. Sitoplazması vakuollüdür ve kromatoid cisimcikleri "puro" şeklindedir.
+     •	Patojenite: Apatojen kabul edilir ve genellikle tedavi gerektirmez.
+     •	Görülme: Dünya genelinde ve Türkiye'de rastlanmaktadır.
+"""},
     "Entamoeba coli": "MORFOLOJİ: Kist 8 çekirdekli, eksantrik endozom. BİLGİ: Non-patojen bağırsak kommensali.",
     "Entamoeba polecki": "BİLGİ: Domuz/maymun amibi. TANI: Tek çekirdekli kist yapısı karakteristiktir.",
     "Endolimax nana": "BİLGİ: En küçük bağırsak amibi. Kisti 4 çekirdekli ve ovaldir. Non-patojen.",
