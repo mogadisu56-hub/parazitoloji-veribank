@@ -229,33 +229,56 @@ with ana_sekme2:
                 else:
                     st.write(veri)
 
-    # 1. KOLON: PROTOZOONLAR
+    # 1. KOLON: PROTOZOONLAR (Görseldeki Hiyerarşiye Göre)
     with p_kat:
         st.markdown("<h4 style='color:#8b0000;'>🧫 PROTOZOONLAR</h4>", unsafe_allow_html=True)
         
-        with st.expander("Amipler"):
-            amipler = ["Entamoeba histolytica", "Entamoeba dispari", "Entamoeba hartmanni", "Entamoeba coli", 
-                       "Entamoeba polecki", "Endolimax nana", "Iodamoeba bütschlii", "Entamoeba gingivalis", 
-                       "Naegleria fowleri", "Acanthamoeba türleri"]
-            for p in amipler: parazit_yazdir(p)
+        # --- 1- SARCOMASTIGOPHORA ---
+        with st.expander("1- SARCOMASTIGOPHORA"):
+            
+            # A- SARCODINA
+            st.markdown("<p style='font-weight:bold; color:#8b0000; margin-bottom:5px;'>A- SARCODINA</p>", unsafe_allow_html=True)
+            with st.expander("Amipler"):
+                amipler = ["Entamoeba histolytica", "Entamoeba dispari", "Entamoeba polecki", "Entamoeba coli", 
+                           "Endolimax nana", "Iodamoeba bütschlii", "Entamoeba hartmanni", "Entamoeba gingivalis"]
+                for p in amipler: parazit_yazdir(p)
+            
+            with st.expander("Serbest Yaşayan Amipler"):
+                serbest = ["Naegleria fowleri", "Acanthamoeba türleri"] # Balamuthia ve Sappinia veride varsa eklenir
+                for p in serbest: parazit_yazdir(p)
+                st.caption("Not: Balamuthia türleri ve Sappinia pedata")
 
-        with st.expander("Kamçılılar"):
-            kamcililar = ["Giardia intestinalis", "Chilomastix mesnili", "Dientamoeba fragilis", "Trichomonas hominis", 
-                          "Enteromonas hominis", "Retortamonas intestinalis", "Trichomonas tenax", "Trichomonas vaginalis"]
-            for p in kamcililar: parazit_yazdir(p)
+            st.divider()
 
-        with st.expander("Hemoflagellatlar"):
-            hemo = ["Leishmania braziliensis kompleksi", "Leishmania donovani kompleksi", "Leishmania mexicana kompleksi", 
-                    "Leishmania tropica kompleksi", "Trypanosoma brucei gambiense", "Trypanosoma brucei rhodesiense", 
-                    "Trypanosoma cruzi", "Trypanosoma rangeli"]
-            for p in hemo: parazit_yazdir(p)
+            # B- MASTIGOPHORA
+            st.markdown("<p style='font-weight:bold; color:#8b0000; margin-bottom:5px;'>B- MASTIGOPHORA (Kamçılılar)</p>", unsafe_allow_html=True)
+            with st.expander("Sindirim Sistemi Kamçılıları"):
+                sindirim = ["Giardia intestinalis", "Trichomonas tenax", "Trichomonas hominis", "Chilomastix mesnili", 
+                            "Dientamoeba fragilis", "Retortamonas intestinalis", "Enteromonas hominis"]
+                for p in sindirim: parazit_yazdir(p)
+            
+            with st.expander("Ürogenital Sistem Kamçılıları"):
+                parazit_yazdir("Trichomonas vaginalis")
+            
+            with st.expander("Kan ve Doku Kamçılıları"):
+                kandoku = ["Leishmania tropica kompleksi", "Leishmania donovani kompleksi", "Trypanosoma cruzi", "Trypanosoma brucei gambiense"]
+                for p in kandoku: parazit_yazdir(p)
 
-        with st.expander("Sporozoonlar & Diğer"):
-            sporo = ["Plasmodium vivax", "Plasmodium ovale", "Plasmodium malariae", "Plasmodium falciparum", 
-                     "Plasmodium knowlesi", "Babesia microti", "Babesia divergens", "Balantidium coli", 
-                     "Isospora belli", "Sarcocystis türleri", "Cryptosporidium parvum", "Blastocystis hominis", 
-                     "Cyclospora cayetanensis", "Microsporidia", "Toxoplasma gondii", "Pneumocystis jirovecii"]
+        # --- 2- APICOMPLEXA ---
+        with st.expander("2- APICOMPLEXA"):
+            sporo = ["Plasmodium vivax", "Plasmodium falciparum", "Babesia microti", "Toxoplasma gondii", 
+                     "Isospora belli", "Cryptosporidium parvum", "Cyclospora cayetanensis", "Sarcocystis türleri"]
             for p in sporo: parazit_yazdir(p)
+            st.caption("Cystoisospora türleri = Isospora belli")
+
+        # --- 3- CILIOPHORA ---
+        with st.expander("3- CILIOPHORA"):
+            parazit_yazdir("Balantidium coli")
+            
+        # --- DİĞER ---
+        with st.expander("DİĞER"):
+            diger = ["Blastocystis hominis", "Microsporidia", "Pneumocystis jirovecii"]
+            for p in diger: parazit_yazdir(p)
 
     # 2. KOLON: HELMİNTLER
     with h_kat:
