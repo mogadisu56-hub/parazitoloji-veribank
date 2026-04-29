@@ -229,6 +229,13 @@ with ana_sekme2:
         İlaç Tedavisi: İnvaziv Enfeksiyonlar: Metronidazol (en yaygın), tinidazol veya ornidazol. Luminal (Taşıyıcılık) Tedavisi: Paromomisin, iyodokinol veya diloksanid furoat. Gebelikte: Paromomisin güvenli bir seçenektir. 
         Cerrahi: Perforasyon, şiddetli kanama veya ilaç tedavisine yanıt vermeyen büyük karaciğer apselerinde (özellikle sol lop yerleşimli rüptür riski olanlar) drenaj veya cerrahi müdahale gerekebilir. 
         Korunma: Temiz içme suyu sağlanması, kanalizasyon altyapısının iyileştirilmesi, gıda sektöründe çalışanların periyodik kontrolü ve el yıkama alışkanlığının yaygınlaştırılması temel korunma yollarıdır. """)
+                    with st.expander("Entamoeba dispar"):
+                        st.write("""- Entamoeba dispar, morfolojik açıdan Entamoeba histolytica ile birebir benzerlik gösterir. Bu iki tür, mikroskobik incelemelerde (boyalı veya boyasız preparatlarda) yapısal olarak birbirinden ayırt edilemezler.
+    Tanı ve Raporlama StandartlarıKlinik Önem: E. dispar nonpatojen (hastalık yapmayan) bir amip olarak kabul edilirken, E. histolytica invaziv amebiyazis etkenidir. 
+    Yanlış tanı, gereksiz tedavi süreçlerine yol açabileceği için bu iki türün ayrımı kritik önem taşır.Raporlama Dili: Sadece mikroskobik incelemeye dayanarak kesin tür tanımı yapılamaz. 
+    Bu nedenle, morfolojik olarak amip görülen olgular laboratuvar sonuçlarına "Entamoeba histolytica / Entamoeba dispar" (kompleks) şeklinde kaydedilmelidir.
+    Ayırıcı Tanı YöntemleriGünümüzde bu iki türü birbirinden ayırmak için mikroskobi dışındaki ileri tetkikler kullanılmaktadır:YöntemAçıklamaELISA (Antijen Tayini)Adezin antijenine spesifik ELISA testleri ile tür ayrımı hızlıca yapılabilir.
+    PCR (Moleküler Tanı)Tür düzeyinde ayrım sağlayan altın standart yöntemlerden biridir.Real-Time PCREn hassas yöntemdir; sadece E. histolytica ve E. dispar ayrımında değil, diğer nonpatojen amip türlerinin identifikasyonunda da başarıyla uygulanır.""")
                     with st.expander("Entamoeba hartmanni"):
                         st.write("- abc")
                     with st.expander("Entamoeba coli"):
