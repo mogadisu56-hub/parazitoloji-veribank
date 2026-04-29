@@ -135,7 +135,6 @@ Apatojen olarak sınıflandırılır; ancak saptanması, hastanın hijyen eksikl
 **Patojenite:** Apatojen kabul edilir; diş çürümelerine zemin hazırlayabilir.
 **Bulaş:** Öpüşme veya ortak mutfak eşyası kullanımı ile doğrudan bulaşır."""
     }
-}
     "Naegleria fowleri": "BİLGİ: PAM (Primer Amibik Meningoensefalit) etkeni. Burun yoluyla MSS'ye girer.",
     "Acanthamoeba türleri": "BİLGİ: Keratit (lens kullanıcıları) ve GAE etkeni. Çift çeperli kist yapısı.",
 
