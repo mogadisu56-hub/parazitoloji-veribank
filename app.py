@@ -342,55 +342,81 @@ with ana_sekme2:
             with st.expander("🔹 Pseudophyllidea"):
                 parazit_yazdir("Diphyllobothrium latum")
 
-    # 3. KOLON: ARTROPODLAR
+    # 3. KOLON: ARTROPODLAR (Akademik Sınıflandırma)
     with a_kat:
         st.markdown("<h4 style='color:#8b0000;'>🕷️ ARTROPODLAR</h4>", unsafe_allow_html=True)
         
-        artropodlar = ["Pediculus humanus capitis", "Pthirus pubis", "Lucilia sericata", "Sarcoptes scabiei", 
-                       "Ixodes türleri", "Phlebotomus türleri", "Glossina türleri"]
-        for p in artropodlar: parazit_yazdir(p)
-# --- SEKME 3: PARAZİTOLOJİ AĞACI ---
-with ana_sekme3:
-    st.markdown("### 🌳 Parazitoloji Akademik Soy Ağacı")
-    st.info("Aşağıdaki liste, tüm tıbbi parazitoloji müfredatının dallanmış yapısını gösterir.")
-    
-    col_a, col_b = st.columns(2)
-    
-    with col_a:
-        st.markdown("<div class='category-header'>1. PROTOZOA</div>", unsafe_allow_html=True)
-        st.markdown("""
-        * **Sarcomastigophora**
-            * *Sarcodina:* E. histolytica, E. coli, Naegleria fowleri...
-            * *Mastigophora:* Giardia, Leishmania, Trypanosoma, T. vaginalis...
-        * **Apicomplexa**
-            * Plasmodium (Sıtma), Babesia, Toxoplasma, Cryptosporidium...
-        * **Ciliophora**
-            * Balantidium coli
-        * **Diğer**
-            * Blastocystis, Pneumocystis...
-        """, unsafe_allow_html=True)
+        # --- 1. SINIF: INSECTA ---
+        with st.expander("1. Sınıf: Insecta (Böcekler)"):
+            
+            # Diptera
+            with st.expander("🔹 Takım: Diptera (İki Kanatlılar)"):
+                st.markdown("**Sivrisinekler (Culicidae):**")
+                sivrisinek = ["Anopheles gambiae", "Anopheles sacharovi", "Culex pipiens", "Aedes aegypti", "Aedes albopictus"]
+                for p in sivrisinek: parazit_yazdir(p)
+                
+                st.markdown("**Tatarcıklar (Psychodidae):**")
+                tatarcik = ["Phlebotomus papatasi", "Phlebotomus sergenti"]
+                for p in tatarcik: parazit_yazdir(p)
+                
+                st.markdown("**Isıran Sinekler:**")
+                isiran = ["Glossina palpalis", "Simulium damnosum", "Chrysops silacea"]
+                for p in isiran: parazit_yazdir(p)
+                
+                st.markdown("**Mekanik ve Miyaz:**")
+                miyaz = ["Musca domestica", "Dermatobia hominis"]
+                for p in miyaz: parazit_yazdir(p)
 
-        st.markdown("<br><div class='category-header'>2. HELMİNTLER</div>", unsafe_allow_html=True)
-        st.markdown("""
-        * **Nematoda**
-            * Bağırsak: Ascaris, Enterobius, Trichuris...
-            * Doku/Kan: Wuchereria, Loa loa, Dracunculus...
-        * **Platyhelminthes**
-            * *Sestodlar:* Taenia, Echinococcus, H. nana...
-            * *Trematodlar:* Fasciola, Schistosoma...
-        """, unsafe_allow_html=True)
+            # Phthiraptera
+            with st.expander("🔹 Takım: Phthiraptera (Bitler)"):
+                bitler = ["Pediculus humanus corporis", "Pediculus humanus capitis", "Pthirus pubis"]
+                for p in bitler: parazit_yazdir(p)
 
-    with col_b:
-        st.markdown("<div class='category-header'>3. ARTROPODLAR</div>", unsafe_allow_html=True)
-        st.markdown("""
-        * **Insecta**
-            * Anopheles, Culex, Phlebotomus (Vektörler)
-            * Pediculus (Bit), Cimex (Tahtakurusu)
-        * **Arachnida**
-            * Ixodes (Kene), Sarcoptes (Uyuz)
-        * **Crustacea**
-            * Cyclops
-        """, unsafe_allow_html=True)
+            # Siphonaptera
+            with st.expander("🔹 Takım: Siphonaptera (Pireler)"):
+                pireler = ["Xenopsylla cheopis", "Pulex irritans", "Tunga penetrans"]
+                for p in pireler: parazit_yazdir(p)
+
+            # Hemiptera
+            with st.expander("🔹 Takım: Hemiptera (Yarım Kanatlılar)"):
+                hemiptera = ["Triatoma infestans", "Rhodnius prolixus", "Cimex lectularius"]
+                for p in hemiptera: parazit_yazdir(p)
+
+        # --- 2. SINIF: ARACHNIDA ---
+        with st.expander("2. Sınıf: Arachnida (Örümcekgiller)"):
+            
+            # Acari
+            with st.expander("🔹 Alt Sınıf: Acari (Keneler & Akarlar)"):
+                st.markdown("**Sert Keneler (Ixodidae):**")
+                sert_kene = ["Ixodes ricinus", "Hyalomma marginatum", "Dermacentor variabilis"]
+                for p in sert_kene: parazit_yazdir(p)
+                
+                st.markdown("**Yumuşak Keneler (Argasidae):**")
+                parazit_yazdir("Ornithodoros moubata")
+                
+                st.markdown("**Akarlar (Acarina):**")
+                akarlar = ["Sarcoptes scabiei", "Demodex folliculorum", "Dermatophagoides pteronyssinus"]
+                for p in akarlar: parazit_yazdir(p)
+
+            # Scorpiones
+            with st.expander("🔹 Takım: Scorpiones (Akrepler)"):
+                akrepler = ["Androctonus crassicauda", "Leiurus quinquestriatus", "Mesobuthus gibbosus"]
+                for p in akrepler: parazit_yazdir(p)
+
+            # Araneae
+            with st.expander("🔹 Takım: Araneae (Örümcekler)"):
+                orumcekler = ["Latrodectus mactans", "Loxosceles reclusa"]
+                for p in orumcekler: parazit_yazdir(p)
+
+        # --- 3. SINIF: CHILOPODA ---
+        with st.expander("3. Sınıf: Chilopoda (Çok Ayaklılar)"):
+            parazit_yazdir("Scolopendra gigantea")
+
+        # --- 4. SINIF: CRUSTACEA ---
+        with st.expander("4. Sınıf: Crustacea (Kabuklular)"):
+            st.info("Bu sınıf genellikle paraziter hastalıkların ara konaklarıdır.")
+            kabuklular = ["Cyclops strenuus", "Eriocheir sinensis"]
+            for p in kabuklular: parazit_yazdir(p)
 
 # --- FOOTER ---
 st.markdown("---")
