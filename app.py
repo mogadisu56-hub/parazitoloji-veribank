@@ -72,7 +72,28 @@ parazit_verisi = {
      •	Görülme: Dünya genelinde ve Türkiye'de rastlanmaktadır.
 """},
     "Entamoeba coli": "MORFOLOJİ: Kist 8 çekirdekli, eksantrik endozom. BİLGİ: Non-patojen bağırsak kommensali.",
-    "Entamoeba polecki": "BİLGİ: Domuz/maymun amibi. TANI: Tek çekirdekli kist yapısı karakteristiktir.",
+    "Entamoeba polecki": {
+        "BİLGİ": """temel olarak domuz ve maymunlarda parazitlenen, ancak zoonotik bir geçişle insanlarda da yerleşebilen bir amip türüdür.
+
+Epidemiyoloji ve Konakçılık
+Asıl Konakçı: Domuzlar ve maymunlar.
+
+İnsan Yerleşimi: Domuz yetiştiricileri ve bu hayvanlarla yakın temasta bulunan kişilerin kalın bağırsaklarında yerleşir.
+
+Yayılım: Papua Yeni Gine'nin belirli bölgelerinde yüksek prevalans göstermektedir. Türkiye'de henüz resmi bir olgu rapor edilmemiştir.
+
+Morfolojik Özellikler
+Trofozoit: Yapısal olarak Entamoeba coli'ye büyük benzerlik gösterir; bu durum tanı aşamasında karışıklıklara yol açabilir.
+
+Kist: Tipik olarak tek çekirdeklidir. Nadir durumlarda iki veya dört çekirdekli formlarına da rastlanabilir.
+
+Kromatoid Cisimcikler: Morfolojik açıdan Entamoeba histolytica ile benzerlik taşır.
+
+Klinik Durum ve Patojenite
+Patojenite: İnsanlar için patojen olarak kabul edilmektedir.
+
+Tedavi ve Takip: Patogenezi ve standart tedavi protokolleri tıp literatüründe henüz tam olarak aydınlatılmamıştır""""},
+        
     "Endolimax nana": "BİLGİ: En küçük bağırsak amibi. Kisti 4 çekirdekli ve ovaldir. Non-patojen.",
     "Iodamoeba bütschlii": "BİLGİ: Kistinde iyot ile boyanan çok büyük bir glikojen vakuolü bulunur. Non-patojen.",
     "Entamoeba gingivalis": {
