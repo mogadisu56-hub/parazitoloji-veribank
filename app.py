@@ -87,51 +87,37 @@ parazit_verisi = {
      •	Görülme: Dünya genelinde ve Türkiye'de rastlanmaktadır.
 """},
     "Entamoeba coli": "MORFOLOJİ: Kist 8 çekirdekli, eksantrik endozom. BİLGİ: Non-patojen bağırsak kommensali.",
-    "Entamoeba polecki": {
-        "BİLGİ": """temel olarak domuz ve maymunlarda parazitlenen, ancak zoonotik bir geçişle insanlarda da yerleşebilen bir amip türüdür.
+   "Entamoeba polecki": {
+        "BİLGİ": """Temel olarak domuz ve maymunlarda parazitlenen, ancak zoonotik bir geçişle insanlarda da yerleşebilen bir amip türüdür.
 
-        Epidemiyoloji ve Konakçılık
-        Asıl Konakçı: Domuzlar ve maymunlar.
+Epidemiyoloji ve Konakçılık
+• Asıl Konakçı: Domuzlar ve maymunlar.
+• İnsan Yerleşimi: Kalın bağırsaklarda yerleşir.
+• Yayılım: Papua Yeni Gine'de yüksek prevalans gösterir.
 
-        • İnsan Yerleşimi: Domuz yetiştiricileri ve bu hayvanlarla yakın temasta bulunan kişilerin kalın bağırsaklarında yerleşir.
+Morfolojik Özellikler
+• Trofozoit: Entamoeba coli'ye büyük benzerlik gösterir.
+• Kist: Tipik olarak tek çekirdeklidir.
+• Kromatoid Cisimcikler: E. histolytica ile benzerlik taşır.
 
-        • Yayılım: Papua Yeni Gine'nin belirli bölgelerinde yüksek prevalans göstermektedir. Türkiye'de henüz resmi bir olgu rapor edilmemiştir.
+Klinik Durum
+• Patojenite: İnsanlar için patojen kabul edilmektedir.
+• Tedavi: Standart protokoller henüz tam aydınlatılmamıştır."""},
 
-        • Morfolojik Özellikler
-        Trofozoit: Yapısal olarak Entamoeba coli'ye büyük benzerlik gösterir; bu durum tanı aşamasında karışıklıklara yol açabilir.
-
-        Kist: Tipik olarak tek çekirdeklidir. Nadir durumlarda iki veya dört çekirdekli formlarına da rastlanabilir.
-
-        Kromatoid Cisimcikler: Morfolojik açıdan Entamoeba histolytica ile benzerlik taşır.
-
-        • Klinik Durum ve Patojenite
-        • Patojenite: İnsanlar için patojen olarak kabul edilmektedir.
-
-        • Tedavi ve Takip: Patogenezi ve standart tedavi protokolleri tıp literatüründe henüz tam olarak aydınlatılmamıştır."""},
-        
     "Endolimax nana": {
-        "BİLGİ": """insan kalın bağırsağında kommensal olarak yaşayan ve klinik olarak apatojen (hastalık yapmayan) kabul edilen bir protozoondur. Türün hem trofozoit hem de kist aşamaları mevcuttur.
+        "BİLGİ": """İnsan kalın bağırsağında kommensal olarak yaşayan ve klinik olarak apatojen kabul edilen bir protozoondur.
 
-        1. Trofozoit Dönemi
-        Boyut: Yaklaşık 5-12 µm aralığındadır.
+1. Trofozoit Dönemi
+• Boyut: 5-12 µm aralığındadır.
+• Hareket: Sınırlı ve oldukça yavaştır.
+• Çekirdek Yapısı: Büyük ve merkezi bir karyozom bulunur.
 
-        Hareket: Hareket yeteneği sınırlıdır ve oldukça yavaştır.
+2. Kist Dönemi
+• Şekil: Genellikle oval bir yapıya sahiptir.
+• Çekirdek Sayısı: Olgun kistlerde genellikle dört adet çekirdek bulunur.
 
-        Morfoloji: Endoplazma ve ektoplazma ayrımı belirgin değildir. Endoplazma içinde asla eritrosit görülmez (bu özellik E. histolytica ayrımında önemlidir).
-
-        Çekirdek Yapısı: Türün en tipik özelliği çekirdeğidir. Çekirdek içinde büyük, düzensiz sınırlı ve merkezi (santral) ya da merkeze yakın (asantral) konumlanmış bir karyozom bulunur.
-
-        2. Kist Dönemi
-        Boyut: Trofozoit ile benzer büyüklüktedir (5-14 µm).
-
-        Şekil: Genellikle oval bir yapıya sahiptir; bazen yuvarlak veya küresel formda görülebilir.
-
-        Çekirdek Sayısı: Olgunlaşmış kistlerde genellikle dört adet çekirdek bulunur (genç formlarda tek çekirdek görülebilir). Boyalı preparatlarda bu çekirdekler belirginleşir.
-    
-        Klinik ve Epidemiyolojik Durum
-        Patojenite: Apatojen olarak sınıflandırılır; ancak dışkı örneklerinde saptanması, hastanın fekal kontaminasyona (hijyen eksikliği veya kirli su/gıda tüketimi) maruz kaldığının bir göstergesidir.
-
-        Yayılım: Dünya genelinde yaygındır ve Türkiye'de de sıkça rastlanan bir amip türüdür."""},
+Klinik ve Epidemiyolojik Durum
+• Patojenite: Apatojen olarak sınıflandırılır; varlığı hijyen eksikliğinin göstergesidir."""},
     "Iodamoeba bütschlii": {
         "BİLGİ":  """insan kalın bağırsağında yaşayan ve adını kist evresindeki belirgin iyot tutulumundan alan bir protozoondur. Genellikle apatojen olarak kabul edilmekle birlikte, mikrobiyolojik tanıda diğer patojen türlerle karıştırılmaması açısından önemlidir.
 
