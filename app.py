@@ -306,38 +306,36 @@ with ana_sekme2:
             l_migrans = ["Ancylostoma braziliense", "Toxocara canis", "Toxocara cati", "Gnathostoma türleri", "Anisakis türleri"]
             for p in l_migrans: parazit_yazdir(p)
 
-       # --- 2- TREMATODLAR ---
+      # --- 2- TREMATODLAR ---
         with st.expander("2- TREMATODLAR (Yassı Solucanlar)"):
-            st.info("Görseldeki yerleşim yeri esaslı sınıflandırma:")
-            
-            # 4 Ana Kategoriyi Yan Yana Gösterelim
-            t1, t2, t3, t4 = st.columns(4)
+            t_col1, t_col2, t_col3, t_col4 = st.columns(4)
 
-            with t1:
-                st.markdown("<p style='font-weight:bold; color:#8b0000; border-bottom:1px solid #ccc;'>Karaciğer</p>", unsafe_allow_html=True)
+            with t_col1:
+                st.markdown("<p style='font-weight:bold; color:#8b0000; border-bottom:1px solid #ccc;'>Karaciğer Trematodları</p>", unsafe_allow_html=True)
                 t_karaciger = [
                     "Fasciola hepatica", "Fasciola gigantica", "Dicrocoelium dendriticum", 
                     "Clonorchis sinensis", "Opisthorchis felineus", "Opisthorchis viverrini"
                 ]
                 for p in t_karaciger: parazit_yazdir(p)
 
-            with t2:
-                st.markdown("<p style='font-weight:bold; color:#8b0000; border-bottom:1px solid #ccc;'>Bağırsak</p>", unsafe_allow_html=True)
+            with t_col2:
+                st.markdown("<p style='font-weight:bold; color:#8b0000; border-bottom:1px solid #ccc;'>Bağırsak Trematodları</p>", unsafe_allow_html=True)
                 t_bagirsak = [
-                    "Fasciolopsis buski", "Heterophyes heterophyes", "Metagonimus yokogawai", 
-                    "Echinostoma türleri", "Gastrodiscoides hominis", "Watsonius watsoni"
+                    "Fasciolopsis buski", "Heterophyes heterophyes", 
+                    "Metagonimus yokogawai", "Echinostoma türleri", 
+                    "Gastrodiscoides hominis", "Watsonius watsoni"
                 ]
                 for p in t_bagirsak: parazit_yazdir(p)
 
-            with t3:
-                st.markdown("<p style='font-weight:bold; color:#8b0000; border-bottom:1px solid #ccc;'>Akciğer</p>", unsafe_allow_html=True)
+            with t_col3:
+                st.markdown("<p style='font-weight:bold; color:#8b0000; border-bottom:1px solid #ccc;'>Akciğer Trematodları</p>", unsafe_allow_html=True)
                 parazit_yazdir("Paragonimus westermani")
 
-            with t4:
-                st.markdown("<p style='font-weight:bold; color:#8b0000; border-bottom:1px solid #ccc;'>Kan</p>", unsafe_allow_html=True)
+            with t_col4:
+                st.markdown("<p style='font-weight:bold; color:#8b0000; border-bottom:1px solid #ccc;'>Kan Trematodları</p>", unsafe_allow_html=True)
                 t_kan = [
-                    "Schistosoma haematobium", "Schistosoma mansoni", "Schistosoma japonicum", 
-                    "Schistosoma intercalatum", "Schistosoma mekongi"
+                    "Schistosoma haematobium", "Schistosoma mansoni", 
+                    "Schistosoma japonicum", "Schistosoma intercalatum", "Schistosoma mekongi"
                 ]
                 for p in t_kan: parazit_yazdir(p)
 
