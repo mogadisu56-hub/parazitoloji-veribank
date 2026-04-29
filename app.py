@@ -67,7 +67,12 @@ parazit_verisi = {
     "Entamoeba polecki": "BİLGİ: Domuz/maymun amibi. TANI: Tek çekirdekli kist yapısı karakteristiktir.",
     "Endolimax nana": "BİLGİ: En küçük bağırsak amibi. Kisti 4 çekirdekli ve ovaldir. Non-patojen.",
     "Iodamoeba bütschlii": "BİLGİ: Kistinde iyot ile boyanan çok büyük bir glikojen vakuolü bulunur. Non-patojen.",
-    "Entamoeba gingivalis": "BİLGİ: Sadece trofozoit formu vardır. Diş eti ve ağız hijyeni ile ilişkilidir.",
+    "Entamoeba gingivalis": {
+        "BİLGİ": """ İnsanda saptanan ilk amip olması nedeniyle tarihi bir öneme sahiptir. Özellikle ağız hijyeni zayıf olan bireylerde prevalansı %95'e kadar çıkabilmektedir. 
+        •	Yerleşim: Diş ve diş eti boşlukları, bademcik kriptleri; nadiren vajinal yerleşim (literatürde bildirilmiştir). 
+        •	Morfoloji: Hayat döngüsünde sadece trofozoit formu bilinmektedir (kist formu yoktur). o	Boyut: Genellikle 7-20 µm (bazen 35 µm'ye kadar çıkabilir). o	Hareket: Hızlı hareket eder; E. histolytica'ya benzer. 
+        o	İçerik: Besin vakuolleri içinde bakteri, lökosit, epitel hücresi ve nadiren eritrosit bulunur. •	Patojenite: Genellikle apatojen kabul edilir; ancak diş çürümelerine zemin hazırladığı düşünülmektedir. 
+        •	Bulaş: Trofozoit formuyla; öpüşme, damlacık enfeksiyonu veya ortak mutfak eşyası kullanımı (çatal, kaşık, bardak) ile doğrudan bulaşır."""},
     "Naegleria fowleri": "BİLGİ: PAM (Primer Amibik Meningoensefalit) etkeni. Burun yoluyla MSS'ye girer.",
     "Acanthamoeba türleri": "BİLGİ: Keratit (lens kullanıcıları) ve GAE etkeni. Çift çeperli kist yapısı.",
 
