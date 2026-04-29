@@ -33,7 +33,7 @@ st.markdown("""
 # --- GENİŞLETİLMİŞ VERİ SETİ ---
 parazit_verisi = {
    # --- AMİPLER (AMEBAE) VERİ SETİ ---
-    "Entamoeba histolytica": {
+    " : blue[Entamoeba histolytica]": {
         "bilgi": """Entamoeba histolytica, dünya genelinde (özellikle tropikal bölgelerde) yaygın görülen, patojenik ve tek hücreli bir anaerop protozoondur. İnsanlarda asemptomatik taşıyıcılıktan ölümcül dizanteriye ve karaciğer apselerine kadar geniş bir klinik yelpazeye neden olur.
 
 **1. Morfoloji ve Hayat Döngüsü**
