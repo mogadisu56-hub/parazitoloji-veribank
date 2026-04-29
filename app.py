@@ -56,7 +56,7 @@ parazit_verisi = {
         Korunma: Temiz içme suyu sağlanması, kanalizasyon altyapısının iyileştirilmesi, gıda sektöründe çalışanların periyodik kontrolü ve el yıkama alışkanlığının yaygınlaştırılması temel korunma yollarıdır.""",
         "resim": "parazit_program/Entamoeba_histolytica.png"},
     "Entamoeba dispari": { 
-        "BİLGİ: """Entamoeba dispar, morfolojik açıdan Entamoeba histolytica ile birebir benzerlik gösterir. Bu iki tür, mikroskobik incelemelerde (boyalı veya boyasız preparatlarda) yapısal olarak birbirinden ayırt edilemezler.
+        "BİLGİ": """Entamoeba dispar, morfolojik açıdan Entamoeba histolytica ile birebir benzerlik gösterir. Bu iki tür, mikroskobik incelemelerde (boyalı veya boyasız preparatlarda) yapısal olarak birbirinden ayırt edilemezler.
     Tanı ve Raporlama StandartlarıKlinik Önem: E. dispar nonpatojen (hastalık yapmayan) bir amip olarak kabul edilirken, E. histolytica invaziv amebiyazis etkenidir. 
     Yanlış tanı, gereksiz tedavi süreçlerine yol açabileceği için bu iki türün ayrımı kritik önem taşır.Raporlama Dili: Sadece mikroskobik incelemeye dayanarak kesin tür tanımı yapılamaz. 
     Bu nedenle, morfolojik olarak amip görülen olgular laboratuvar sonuçlarına "Entamoeba histolytica / Entamoeba dispar" (kompleks) şeklinde kaydedilmelidir.
