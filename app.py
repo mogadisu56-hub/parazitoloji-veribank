@@ -206,39 +206,24 @@ with ana_sekme2:
 
     with p_kat:
         with st.expander("🧫 PROTOZOONLAR"):
-            with st.expander("Sarcomastigophora"):
-                with st.expander("Sarcodina (Amipler)"):
-                    # Veriyi parazit_verisi sözlüğünden dinamik alıyoruz
-                    for p_adi in ["Entamoeba histolytica", "Entamoeba dispari", "Entamoeba hartmanni", "Entamoeba coli", "Entamoeba polecki"]:
-                        with st.expander(p_adi):
-                            veri = parazit_verisi.get(p_adi, "Bilgi bulunamadı.")
+            with st.expander("Sarcodina (Amipler)"):
+                # Gösterilmesini istediğiniz parazit listesi
+                amipler = ["Entamoeba histolytica", "Entamoeba dispari", "Entamoeba hartmanni", "Entamoeba coli"]
+                
+                for p_adi in amipler:
+                    with st.expander(p_adi):
+                        # Veriyi güvenli bir şekilde al
+                        veri = parazit_verisi.get(p_adi)
+                        
+                        if veri:
+                            # EĞER VERİ BİR SÖZLÜKSE (bilgi ve resim içeriyorsa)
                             if isinstance(veri, dict):
-                                st.write(veri["bilgi"])
+                                st.write(veri.get("bilgi", "Bilgi detayı bulunamadı."))
+                            # EĞER VERİ SADECE DÜZ METİNSE
                             else:
                                 st.write(veri)
-                                
-                with st.expander("Mastigophora (Kamçılılar)"):
-                    # Örnek: Giardia intestinalis verisini çekelim
-                    with st.expander("Giardia intestinalis"):
-                        st.write(parazit_verisi.get("Giardia intestinalis", "Bilgi yok."))
-                    # Manuel gruplandırma devam edebilir
-                    st.markdown("**Ürogenital:** Trichomonas vaginalis")
-            
-            with st.expander("Apicomplexa (Sporozoonlar)"):
-                with st.expander("Toxoplasma gondii"):
-                    st.write(parazit_verisi.get("Toxoplasma gondii", "Bilgi yok."))
-
-    with h_kat:
-        with st.expander("🐛 HELMİNTLER"):
-            with st.expander("Nematodlar (Yuvarlak)"):
-                with st.expander("Enterobius vermicularis"):
-                    st.write(parazit_verisi.get("Enterobius vermicularis", "Bilgi yok."))
-
-    with a_kat:
-        with st.expander("🕷️ ARTROPODLAR"):
-            with st.expander("Arachnida (Araknidler)"):
-                with st.expander("Sarcoptes scabiei"):
-                    st.write(parazit_verisi.get("Sarcoptes scabiei", "Bilgi yok."))
+                        else:
+                            st.warning(f"{p_adi} için henüz veri girişi yapılmadı.")
 # --- SEKME 3: PARAZİTOLOJİ AĞACI ---
 with ana_sekme3:
     st.markdown("### 🌳 Parazitoloji Akademik Soy Ağacı")
