@@ -213,7 +213,7 @@ with ana_sekme2:
         İnsanlarda asemptomatik taşıyıcılıktan ölümcül dizanteriye ve karaciğer apselerine kadar geniş bir klinik yelpazeye neden olur. 
         1. Morfoloji ve Hayat Döngüsü Parazitin hayat döngüsü; trofozoit, prekist, kist, metakist ve metakistik trofozoit evrelerinden oluşur. 
         Trofozoit: Aktif hareket eden, beslenen ve çoğalan formdur. Lobopod adı verilen yalancı ayaklarla hareket eder. Sitoplazmasında fagosite edilmiş alyuvarlar (eritrosit) bulunabilir; bu özellik teşhiste önemlidir.
-        Kist: Parazitin dış ortama ve mide asidine dirençli, enfektif formudur. Olgun kist 4 çekirdeklidir. İçerisinde uçları yuvarlak kromatoid cisimcikler bulunur (bu özellik E. coli'den ayrımını sağlar).
+        Kist: Parazitin dış ortama ve mide asidine dirençli, enfektif formudur. Olgun kist 4 çekirdeklidir. İçerisinde uçları yuvarlak kromatoid cisimcikler bulunur (bu özellik E. coli den ayrımını sağlar).
         Döngü: Ağız yoluyla alınan 4 çekirdekli olgun kistler, ince bağırsakta kist duvarının parçalanmasıyla metakistik trofozoitlere dönüşür. 
         Bunlar kalın bağırsağa (özellikle çekum ve rekto-sigmoidal bölgeye) yerleşerek kolonize olurlar. 2. Patogenez ve Klinik Belirtiler Parazit, yüzeyindeki Gal/GalNAc lektin aracılığıyla bağırsak epiteline yapışır. 
         Proteolitik enzimler salgılayarak dokuyu istila eder. Bağırsak Amoebiosisi: Amibik Dizanteri: Kanlı-mukuslu dışkılama, karın ağrısı ve tenesmus ile karakterizedir.
