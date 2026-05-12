@@ -1,5 +1,14 @@
-/app.py
-/templates/index.html
+import streamlit as st
+import streamlit.components.v1 as components
+
+st.set_page_config(layout="wide")
+
+# HTML dosyanı oku
+with open("index.html", "r", encoding="utf-8") as f:
+    html_code = f.read()
+
+# Streamlit içine göm
+components.html(html_code, height=900, scrolling=True)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
