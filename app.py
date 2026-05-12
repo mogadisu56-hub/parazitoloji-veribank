@@ -1,6 +1,3 @@
-import streamlit as st
-import os
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -549,5 +546,3 @@ import os
     </script>
 </body>
 </html>
-st.markdown("---")
-st.caption("© 2026 Kırşehir Ahi Evran Üniversitesi Tıp Fakültesi - Tıbbi Parazitoloji Anabilim Dalı")
