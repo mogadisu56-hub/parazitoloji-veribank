@@ -18,13 +18,14 @@ def parazit_yazdir(isim):
     if veri:
         with st.expander(isim):
 
-            # 📌 BUTON EKLE
-            if st.button(f"Detaylı Kart Aç: {isim}", key=f"btn_{isim}"):
+            # 🔥 BUTON EKLE
+            if st.button(f"{isim} detay", key=f"btn_{isim}"):
                 parazit_kart(isim, veri)
 
+            # kısa bilgi göster
             if isinstance(veri, dict):
-                icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Detaylı bilgi yok"
-                st.write(icerik[:200] + "...")  # kısa preview
+                icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Bilgi yok"
+                st.write(icerik[:150] + "...")
             else:
                 st.write(veri)
 
