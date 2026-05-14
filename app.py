@@ -1,4 +1,9 @@
 import streamlit as st
+import os
+
+st.set_page_config(layout="wide")  # 🔥 BUNU EKLE
+
+# geri kalan kod...
 
 # ---------------- DIALOG ----------------
 @st.dialog("📌 Parazit Bilgi Kartı")
