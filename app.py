@@ -610,19 +610,18 @@ with ana_sekme5:
         st.success("Kaydedildi!")
         st.session_state.kayit_mesaj = False
     if st.button("💾 Kaydet"):
+        if isinstance(veri, dict):
+            parazit_verisi[secim]["bilgi"] = yeni_bilgi
+        else:
+            parazit_verisi[secim] = yeni_bilgi
 
-    if isinstance(veri, dict):
-        parazit_verisi[secim]["bilgi"] = yeni_bilgi
-    else:
-        parazit_verisi[secim] = yeni_bilgi
-
-    veri_kaydet(parazit_verisi)
+        veri_kaydet(parazit_verisi)
 
     # 🔥 EN KRİTİK SATIR
-    st.session_state.veri = veri_yukle()
+        st.session_state.veri = veri_yukle()
 
-    st.success("Kaydedildi!")
-    st.rerun()
+        st.success("Kaydedildi!")
+        st.rerun()
     
 # --- FOOTER ---
 st.markdown("---")
