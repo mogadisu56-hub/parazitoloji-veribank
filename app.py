@@ -57,7 +57,7 @@ Bulaşma yolu fekal-oral (dışkı-ağız) yoldur. Kontamine su ve gıdalar, kir
 
 **4. Tanı Yöntemleri**
 **Mikroskopi:** Dışkıda trofozoit veya kist aranır. Lugol veya kalıcı boyalar (Trikrom) kullanılır.
-**Seroloji:** Bağırsak dışı vakaların %95'inde antikor testleri (ELISA) pozitiftir.
+**Seroloji:** Bağırsak dışı vakaların %95 inde antikor testleri (ELISA) pozitiftir.
 **Antijen/Moleküler:** PCR yöntemleri, E. histolytica ile E. dispar ayrımı için altın standarttır.
 
 **5. Tedavi ve Kontrol**
