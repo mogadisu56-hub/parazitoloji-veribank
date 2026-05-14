@@ -328,13 +328,12 @@ with ana_sekme2:
 
     # Yardımcı Fonksiyon: Veri tipine göre içeriği basar
    def parazit_yazdir(isim):
-    veri = parazit_verisi.get(isim)
-
-    if veri:
-        if st.button(isim, key=isim):
-            parazit_kart(isim, veri)
         veri = parazit_verisi.get(isim)
         if veri:
+            if st.button(isim, key=isim):
+            parazit_kart(isim, veri)
+            veri = parazit_verisi.get(isim)
+            if veri:
             with st.expander(isim):
                 if isinstance(veri, dict):
                     # "bilgi" veya "BİLGİ" anahtarını kontrol et (küçük/büyük harf duyarlılığı için)
