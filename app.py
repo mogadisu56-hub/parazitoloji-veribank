@@ -286,8 +286,8 @@ with ana_sekme2:
     
     p_kat, h_kat, a_kat = st.columns(3)
 
-    # Yardımcı Fonksiyon: Veri tipine göre içeriği basar
-   def parazit_yazdir(isim):
+# Yardımcı Fonksiyon: Veri tipine göre içeriği basar
+def parazit_yazdir(isim):
     veri = parazit_verisi.get(isim)
 
     if not veri:
