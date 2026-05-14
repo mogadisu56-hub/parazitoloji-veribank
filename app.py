@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+import os
 
 # -------------------------------
 # 📌 PARAZİT KARTI (POPUP)
@@ -16,23 +17,22 @@ def parazit_kart(isim, veri):
 
 
 # -------------------------------
-# 📌 YARDIMCI FONKSİYON (BUTON)
+# 📌 BUTONLA AÇMA
 # -------------------------------
 def parazit_yazdir(isim):
     veri = parazit_verisi.get(isim)
 
     if veri:
-        if st.button(isim, key=isim):
+        if st.button(isim, key=f"btn_{isim}"):
             parazit_kart(isim, veri)
 
 
 # -------------------------------
-# 📌 VERİ YÜKLE
+# 📌 VERİ YÜKLE / KAYDET
 # -------------------------------
 def veri_yukle():
     with open("parazitler.json", "r", encoding="utf-8") as f:
         return json.load(f)
-
 
 def veri_kaydet(data):
     with open("parazitler.json", "w", encoding="utf-8") as f:
@@ -45,6 +45,9 @@ def veri_kaydet(data):
 if "veri" not in st.session_state:
     st.session_state.veri = veri_yukle()
 
+if "kayit_mesaj" not in st.session_state:
+    st.session_state.kayit_mesaj = False
+
 parazit_verisi = st.session_state.veri
 
 
@@ -52,70 +55,167 @@ parazit_verisi = st.session_state.veri
 # 📌 SAYFA AYAR
 # -------------------------------
 st.set_page_config(
-    page_title="KAEÜ Parazitoloji",
+    page_title="KAEÜ Parazitoloji Veri Bankası",
     page_icon="🔬",
     layout="wide"
 )
 
-st.title("🔬 KAEÜ Parazitoloji Veri Bankası")
+# -------------------------------
+# 🎨 STİL
+# -------------------------------
+st.markdown("""
+<style>
+.main { background-color: #f8f9fa; }
+.stExpander { border: 1px solid #8b0000; border-radius: 10px; margin-bottom: 5px; }
+</style>
+""", unsafe_allow_html=True)
+
+
+# -------------------------------
+# 📌 ÜST BAŞLIK
+# -------------------------------
+col1, col2 = st.columns([1, 5])
+with col1:
+    st.markdown("# 🔬")
+with col2:
+    st.markdown("## KAEÜ Tıp Fakültesi")
+    st.markdown("Tıbbi Parazitoloji AD")
 
 
 # -------------------------------
 # 📌 SEKMELER
 # -------------------------------
-tab1, tab2 = st.tabs(["🔍 Arama", "🗂️ Sınıflandırma"])
+sekme1, sekme2, sekme3, sekme4, sekme5 = st.tabs([
+    "🔍 Hızlı Sorgu",
+    "🗂️ Tıbbi Önemi Olan Parazitler",
+    "🌳 Parazitoloji Ağacı",
+    "📘 Temel Parazitoloji",
+    "⚙️ Veri Düzenle"
+])
 
 
 # -------------------------------
 # 🔍 SEKME 1
 # -------------------------------
-with tab1:
+with sekme1:
     sorgu = st.text_input("Parazit ara")
 
     if sorgu:
         for isim, veri in parazit_verisi.items():
             if sorgu.lower() in isim.lower():
-                st.subheader(isim)
+                st.markdown(f"### {isim}")
 
-                if st.button(f"Bilgi Aç: {isim}", key=f"sorgu_{isim}"):
+                if st.button(f"Bilgi Aç", key=f"sorgu_{isim}"):
                     parazit_kart(isim, veri)
 
 
 # -------------------------------
 # 🗂️ SEKME 2
 # -------------------------------
-with tab2:
-    st.subheader("📚 Sistematik Sınıflandırma")
+with sekme2:
+    st.markdown("### 📚 Sistematik Sınıflandırma")
 
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
 
-    # -------------------------------
     # PROTOZOONLAR
-    # -------------------------------
     with col1:
-        st.markdown("### 🧫 Protozoonlar")
+        st.markdown("#### 🧫 Protozoonlar")
 
         with st.expander("Amipler"):
             amipler = [
                 "Entamoeba histolytica",
                 "Entamoeba coli",
-                "Entamoeba dispar"
+                "Entamoeba dispar",
+                "Endolimax nana",
+                "Iodamoeba bütschlii"
             ]
-
             for p in amipler:
                 parazit_yazdir(p)
 
-    # -------------------------------
+        with st.expander("Kamçılılar"):
+            for p in ["Giardia intestinalis", "Trichomonas vaginalis"]:
+                parazit_yazdir(p)
+
     # HELMİNTLER
-    # -------------------------------
     with col2:
-        st.markdown("### 🐛 Helmintler")
+        st.markdown("#### 🐛 Helmintler")
 
         with st.expander("Nematodlar"):
-            nematodlar = [
-                "Ascaris lumbricoides",
-                "Enterobius vermicularis"
-            ]
-
-            for p in nematodlar:
+            for p in ["Ascaris lumbricoides", "Enterobius vermicularis"]:
                 parazit_yazdir(p)
+
+        with st.expander("Sestodlar"):
+            for p in ["Taenia saginata", "Echinococcus granulosus"]:
+                parazit_yazdir(p)
+
+    # ARTROPODLAR
+    with col3:
+        st.markdown("#### 🕷️ Artropodlar")
+
+        with st.expander("Örnekler"):
+            for p in ["Sarcoptes scabiei", "Pediculus humanus capitis"]:
+                parazit_yazdir(p)
+
+
+# -------------------------------
+# 🌳 SEKME 3
+# -------------------------------
+with sekme3:
+    st.markdown("### 🌳 Parazitoloji Ağacı")
+
+    agac = {
+        "Protozoonlar": ["Entamoeba histolytica", "Giardia intestinalis"],
+        "Helmintler": ["Ascaris lumbricoides"],
+    }
+
+    for kat, liste in agac.items():
+        with st.expander(kat):
+            for p in liste:
+                parazit_yazdir(p)
+
+
+# -------------------------------
+# 📘 SEKME 4
+# -------------------------------
+with sekme4:
+    st.markdown("## 📘 Temel Parazitoloji")
+
+    with st.expander("Parazit Nedir"):
+        st.write("Parazit, başka canlıya bağımlı yaşayan organizmadır.")
+
+    with st.expander("Bulaş Yolları"):
+        st.write("Fekal-oral, vektör, temas")
+
+
+# -------------------------------
+# ⚙️ SEKME 5
+# -------------------------------
+with sekme5:
+    st.markdown("## ⚙️ Veri Düzenle")
+
+    secim = st.selectbox("Parazit seç", list(parazit_verisi.keys()))
+    veri = parazit_verisi.get(secim)
+
+    if isinstance(veri, dict):
+        mevcut = veri.get("bilgi") or veri.get("BİLGİ") or ""
+    else:
+        mevcut = veri
+
+    yeni = st.text_area("Bilgi", mevcut)
+
+    if st.button("Kaydet"):
+        if isinstance(veri, dict):
+            parazit_verisi[secim]["bilgi"] = yeni
+        else:
+            parazit_verisi[secim] = yeni
+
+        veri_kaydet(parazit_verisi)
+        st.success("Kaydedildi")
+        st.rerun()
+
+
+# -------------------------------
+# FOOTER
+# -------------------------------
+st.markdown("---")
+st.caption("© 2026 KAEÜ")
