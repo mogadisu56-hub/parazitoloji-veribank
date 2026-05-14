@@ -301,10 +301,10 @@ with ana_sekme2:
              if st.button(f"🔬 {isim}", key=f"btn_{isim}"):
                  parazit_kart(isim, veri)
                     # "bilgi" veya "BİLGİ" anahtarını kontrol et (küçük/büyük harf duyarlılığı için)
-                    icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Detaylı bilgi bulunamadı."
-                    st.write(icerik)
-                else:
-                    st.write(veri)
+                        icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Detaylı bilgi bulunamadı."
+                        st.write(icerik)
+                    else:
+                        st.write(veri)
 
     # 1. KOLON: PROTOZOONLAR (Görseldeki Hiyerarşiye Göre)
     with p_kat:
