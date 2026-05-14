@@ -17,16 +17,8 @@ def parazit_kart(isim, veri):
 def parazit_yazdir(isim):
     veri = parazit_verisi.get(isim)
     if veri:
-        # 🔥 Parazit ismi direkt buton olsun
         if st.button(f"🔬 {isim}", key=f"btn_{isim}"):
             parazit_kart(isim, veri)
-
-            # kısa bilgi göster
-            if isinstance(veri, dict):
-                icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Bilgi yok"
-                st.write(icerik[:150] + "...")
-            else:
-                st.write(veri)
 
 
 # --- GENİŞLETİLMİŞ VERİ SETİ ---
