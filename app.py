@@ -14,11 +14,19 @@ def parazit_kart(isim, veri):
 
 # ---------------- YARDIMCI FONKSİYON ----------------
 def parazit_yazdir(isim):
-    if isim in parazit_verisi:
-        if st.button(isim, key=isim):
-            parazit_kart(isim, parazit_verisi[isim])
-    else:
-        st.write(f"{isim} (veri yok)")
+    veri = parazit_verisi.get(isim)
+    if veri:
+        with st.expander(isim):
+
+            # 📌 BUTON EKLE
+            if st.button(f"Detaylı Kart Aç: {isim}", key=f"btn_{isim}"):
+                parazit_kart(isim, veri)
+
+            if isinstance(veri, dict):
+                icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Detaylı bilgi yok"
+                st.write(icerik[:200] + "...")  # kısa preview
+            else:
+                st.write(veri)
 
 
 # --- GENİŞLETİLMİŞ VERİ SETİ ---
