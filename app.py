@@ -1,6 +1,16 @@
-import streamlit as st
-import os
+import json
 
+# JSON yükle
+def veri_yukle():
+    with open("parazitler.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+
+# JSON kaydet
+def veri_kaydet(data):
+    with open("parazitler.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+
+parazit_verisi = veri_yukle()
 # --- SAYFA AYARLARI ---
 st.set_page_config(
     page_title="KAEÜ Parazitoloji Veri Bankası", 
@@ -246,11 +256,12 @@ with col2:
     st.markdown("<p style='color:gray;'>Tıbbi Parazitoloji Anabilim Dalı Akademik Rehberi</p>", unsafe_allow_html=True)
 
 # --- ANA SEKMELER ---
-ana_sekme1, ana_sekme2, ana_sekme3, ana_sekme4 = st.tabs([
+ana_sekme1, ana_sekme2, ana_sekme3, ana_sekme4, admin_sekme = st.tabs([
     "🔍 Hızlı Sorgu",
     "🗂️ Tıbbi Önemi Olan Parazitler",
     "🌳 Parazitoloji Ağacı",
     "📘 Temel Parazitoloji"
+    "⚙️ Veri Düzenle"
 ])
 
 # --- SEKME 1: SORGULAMA ---
@@ -572,6 +583,29 @@ Parazit, yaşamını sürdürebilmek için başka bir canlıya (konak) bağıml�
 - Gıda güvenliği
 - Vektör kontrolü
 """)
+    with admin_sekme:
+    st.markdown("## ⚙️ Veri Düzenleme Paneli")
+
+    secim = st.selectbox("Parazit seç", list(parazit_verisi.keys()))
+
+    mevcut_bilgi = parazit_verisi[secim]["bilgi"]
+
+    yeni_bilgi = st.text_area("Bilgi düzenle", mevcut_bilgi, height=200)
+
+    if st.button("💾 Kaydet"):
+        parazit_verisi[secim]["bilgi"] = yeni_bilgi
+        veri_kaydet(parazit_verisi)
+        st.success("Kaydedildi!")
+    {
+  "Entamoeba histolytica": {
+    "bilgi": "İlk test bilgisi",
+    "resim": ""
+  },
+  "Giardia intestinalis": {
+    "bilgi": "Bağırsak paraziti",
+    "resim": ""
+  }
+}
 # --- FOOTER ---
 st.markdown("---")
 st.caption("© 2026 Kırşehir Ahi Evran Üniversitesi Tıp Fakültesi - Tıbbi Parazitoloji Anabilim Dalı")
