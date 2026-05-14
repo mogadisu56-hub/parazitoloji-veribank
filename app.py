@@ -298,8 +298,8 @@ with ana_sekme2:
     def parazit_yazdir(isim):
         veri = parazit_verisi.get(isim)
         if veri:
-            with st.expander(isim):
-                if isinstance(veri, dict):
+             if st.button(f"🔬 {isim}", key=f"btn_{isim}"):
+            parazit_kart(isim, veri)
                     # "bilgi" veya "BİLGİ" anahtarını kontrol et (küçük/büyük harf duyarlılığı için)
                     icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Detaylı bilgi bulunamadı."
                     st.write(icerik)
