@@ -327,15 +327,15 @@ with ana_sekme2:
     p_kat, h_kat, a_kat = st.columns(3)
 
  # Yardımcı Fonksiyon: Veri tipine göre içeriği basar
-   def parazit_kart(isim, veri):
-    with st.container():
-        st.markdown(f"### 🧬 {isim}")
-        st.markdown("---")
+    def parazit_kart(isim, veri):
+        with st.container():
+            st.markdown(f"### 🧬 {isim}")
+            st.markdown("---")
 
-        if isinstance(veri, dict):
-            icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Bilgi yok"
-            st.write(icerik)
-        else:
+            if isinstance(veri, dict):
+                icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Bilgi yok"
+                st.write(icerik)
+            else:
             st.write(veri)
 
     # 1. KOLON: PROTOZOONLAR (Görseldeki Hiyerarşiye Göre)
