@@ -10,7 +10,7 @@ def parazit_kart(isim, veri):
         icerik = veri
 
     st.markdown(f"### {isim}")
-    st.write(icerik)
+   formatli_yazi_goster(icerik)
 
 
 # ---------------- YARDIMCI FONKSİYON ----------------
@@ -19,7 +19,12 @@ def parazit_yazdir(isim):
     if veri:
         if st.button(f"🔬 {isim}", key=f"btn_{isim}"):
             parazit_kart(isim, veri)
-
+def formatli_yazi_goster(metin):
+    st.markdown(f"""
+    <div style="white-space: pre-wrap; line-height:1.6; font-size:16px;">
+    {metin}
+    </div>
+    """, unsafe_allow_html=True)
 
 # --- GENİŞLETİLMİŞ VERİ SETİ ---
 parazit_verisi = {
@@ -262,7 +267,7 @@ with ana_sekme1:
                     
                     with col_metin:
                         st.markdown("### Genel Bilgiler")
-                        st.write(veri["bilgi"])
+                        formatli_yazi_goster(veri["bilgi"])
                     
                     with col_resim:
                         # DOSYA YOLU KONTROLÜ
@@ -583,7 +588,7 @@ Bu bireylerde parazitler daha kolay yerleşir ve enfeksiyonlar daha ağır seyre
     @st.dialog("📌 Bilgi Kartı")
     def bilgi_karti(baslik, icerik):
         st.markdown(f"### {baslik}")
-        st.write(icerik)
+       formatli_yazi_goster(icerik)
 
     # ---------------- UI ----------------
     st.markdown("### Konular")
