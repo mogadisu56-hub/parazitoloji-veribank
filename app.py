@@ -565,8 +565,8 @@ with ana_sekme4:
     st.markdown("## 📘 Temel Parazitoloji")
          # --- Parazit nedir ---
                 with st.expander("parazit"):
-                s_cyclo = ["Taenia saginata", "Taenia solium", "Hymenolepis nana", "Hymenolepis diminuta", "Dipylidium caninum", "Echinococcus türleri"]
-                for p in s_cyclo: parazit_yazdir(p)
+                    s_cyclo = ["Taenia saginata", "Taenia solium", "Hymenolepis nana", "Hymenolepis diminuta", "Dipylidium caninum", "Echinococcus türleri"]
+                    for p in s_cyclo: parazit_yazdir(p)
     st.markdown("""
 ### 🔬 Parazit Nedir?
 Parazit, yaşamını sürdürebilmek için başka bir canlıya (konak) bağımlı olan organizmadır.
