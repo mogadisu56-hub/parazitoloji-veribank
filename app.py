@@ -588,7 +588,7 @@ Bu bireylerde parazitler daha kolay yerleşir ve enfeksiyonlar daha ağır seyre
     @st.dialog("📌 Bilgi Kartı")
     def bilgi_karti(baslik, icerik):
         st.markdown(f"### {baslik}")
-       formatli_yazi_goster(icerik)
+        formatli_yazi_goster(icerik)
 
     # ---------------- UI ----------------
     st.markdown("### Konular")
