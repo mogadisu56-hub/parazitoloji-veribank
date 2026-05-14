@@ -17,11 +17,9 @@ def parazit_kart(isim, veri):
 def parazit_yazdir(isim):
     veri = parazit_verisi.get(isim)
     if veri:
-        with st.expander(isim):
-
-            # 🔥 BUTON EKLE
-            if st.button(f"{isim} detay", key=f"btn_{isim}"):
-                parazit_kart(isim, veri)
+        # 🔥 Parazit ismi direkt buton olsun
+        if st.button(f"🔬 {isim}", key=f"btn_{isim}"):
+            parazit_kart(isim, veri)
 
             # kısa bilgi göster
             if isinstance(veri, dict):
