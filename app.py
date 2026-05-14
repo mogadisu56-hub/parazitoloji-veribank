@@ -532,7 +532,8 @@ with ana_sekme4:
 
 Parazitler konak üzerinde veya içinde yaşayarak beslenir ve çoğu zaman konağa zarar verir.""",
 
-        "🧬 KONAK": """**1. Son Konak (Kesin Konak)**
+        "🧬 KONAK": """
+**1. Son Konak (Kesin Konak)**
 Parazitin erişkin formunu veya eşeyli üreme evresini barındıran konaktır.
 Taenia saginata → son konak: insan
 Toxoplasma gondii → son konak: kedi ve kedigiller
