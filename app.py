@@ -563,39 +563,61 @@ with ana_sekme3:
 # --- SEKME 4: TEMEL PARAZİTOLOJİ ---
 with ana_sekme4:
     st.markdown("## 📘 Temel Parazitoloji")
-         # --- Parazit nedir ---
-                with st.expander("parazit"):
-                    s_cyclo = ["Taenia saginata", "Taenia solium", "Hymenolepis nana", "Hymenolepis diminuta", "Dipylidium caninum", "Echinococcus türleri"]
-                    for p in s_cyclo: parazit_yazdir(p)
-    st.markdown("""
-### 🔬 Parazit Nedir?
+
+    # 1️⃣ Parazit Nedir
+    with st.expander("🔬 Parazit Nedir?"):
+        st.write("""
 Parazit, yaşamını sürdürebilmek için başka bir canlıya (konak) bağımlı olan organizmadır.
+Konaktan beslenir ve çoğu zaman ona zarar verir.
+""")
 
-### 🧬 Konak Tipleri
-- **Definitif Konak:** Erişkin formun yaşadığı konak
-- **Ara Konak:** Larva veya gelişim evresinin bulunduğu konak
-- **Rezervuar Konak:** Doğada parazitin saklandığı konak
+    # 2️⃣ Konak Tipleri
+    with st.expander("🧬 Konak Tipleri"):
+        st.write("""
+- **Definitif Konak:** Erişkin form burada yaşar
+- **Ara Konak:** Larva veya gelişim evresi bulunur
+- **Rezervuar Konak:** Parazitin doğada saklandığı konak
+""")
 
-### 🔄 Bulaş Yolları
-- Fekal-oral
-- Vektör (sivrisinek, kene vb.)
-- Deriden penetrasyon
+    # 3️⃣ Bulaş Yolları
+    with st.expander("🔄 Bulaş Yolları"):
+        st.write("""
+- Fekal-oral (su, gıda)
+- Vektör (sivrisinek, kene)
+- Deriden giriş
 - Cinsel yol
+""")
 
-### 🧪 Tanı Yöntemleri
+    # 4️⃣ Tanı Yöntemleri
+    with st.expander("🧪 Tanı Yöntemleri"):
+        st.write("""
 - Mikroskopi
-- Seroloji (ELISA)
+- ELISA (seroloji)
 - PCR (moleküler tanı)
+""")
 
-### 💊 Tedavi
-- Antiparaziter ilaçlar (Metronidazol, Albendazol vb.)
-- Destek tedavileri
+    # 5️⃣ Tedavi
+    with st.expander("💊 Tedavi"):
+        st.write("""
+- Antiparaziter ilaçlar (Metronidazol, Albendazol)
+- Destek tedavisi
+""")
 
-### 🛡️ Korunma
+    # 6️⃣ Korunma
+    with st.expander("🛡️ Korunma"):
+        st.write("""
 - El hijyeni
 - Temiz su kullanımı
 - Gıda güvenliği
 - Vektör kontrolü
+""")
+
+    # 7️⃣ Önemli Kavramlar (ekstra)
+    with st.expander("📌 Önemli Kavramlar"):
+        st.write("""
+- **Zoonoz:** Hayvandan insana bulaş
+- **İnvazyon:** Parazitin dokuya girmesi
+- **Enfeksiyon:** Parazitin vücutta bulunması
 """)
 # --- SEKME 5: VERİ DÜZENLE ---
 with ana_sekme5:
