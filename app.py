@@ -1,9 +1,6 @@
 import streamlit as st
 import os
-st.set_page_config(layout="wide") 
-st.markdown("""
-# geri kalan kod...
-
+st.set_page_config(layout="wide")
 # ---------------- DIALOG ----------------
 @st.dialog("📌 Parazit Bilgi Kartı")
 def parazit_kart(isim, veri):
