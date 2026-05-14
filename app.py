@@ -521,36 +521,54 @@ with ana_sekme3:
 with ana_sekme4:
     st.markdown("## 📘 Temel Parazitoloji")
 
-    st.markdown("""
-### 🔬 Parazit Nedir?
-Parazit, yaşamını sürdürebilmek için başka bir canlıya (konak) bağımlı olan organizmadır.
+    # ---------------- VERİ ----------------
+    temel_bilgiler = {
+        "🔬 Parazit Nedir?": """Parazit, yaşamını sürdürebilmek için başka bir canlıya (konak) bağımlı olan organizmadır.
 
-### 🧬 Konak Tipleri
-- **Definitif Konak:** Erişkin formun yaşadığı konak
-- **Ara Konak:** Larva veya gelişim evresinin bulunduğu konak
-- **Rezervuar Konak:** Doğada parazitin saklandığı konak
+Parazitler konak üzerinde veya içinde yaşayarak beslenir ve çoğu zaman konağa zarar verir.""",
 
-### 🔄 Bulaş Yolları
-- Fekal-oral
-- Vektör (sivrisinek, kene vb.)
-- Deriden penetrasyon
-- Cinsel yol
+        "🧬 Konak Tipleri": """- **Definitif Konak:** Erişkin formun yaşadığı konak  
+- **Ara Konak:** Larva veya gelişim evresinin bulunduğu konak  
+- **Rezervuar Konak:** Parazitin doğada saklandığı konak""",
 
-### 🧪 Tanı Yöntemleri
-- Mikroskopi
-- Seroloji (ELISA)
-- PCR (moleküler tanı)
+        "🔄 Bulaş Yolları": """- Fekal-oral (su ve gıda ile)  
+- Vektörler (sivrisinek, kene vb.)  
+- Deriden penetrasyon  
+- Cinsel yol""",
 
-### 💊 Tedavi
-- Antiparaziter ilaçlar (Metronidazol, Albendazol vb.)
-- Destek tedavileri
+        "🧪 Tanı Yöntemleri": """- Mikroskopi  
+- Serolojik testler (ELISA)  
+- Moleküler yöntemler (PCR)""",
 
-### 🛡️ Korunma
-- El hijyeni
-- Temiz su kullanımı
-- Gıda güvenliği
-- Vektör kontrolü
-""")
+        "💊 Tedavi": """- Antiparaziter ilaçlar (Metronidazol, Albendazol vb.)  
+- Destek tedavileri  
+- Semptomatik yaklaşım""",
+
+        "🛡️ Korunma": """- El hijyeni  
+- Temiz içme suyu  
+- Gıda güvenliği  
+- Vektör kontrolü"""
+    }
+
+    # ---------------- DIALOG ----------------
+    @st.dialog("📌 Bilgi Kartı")
+    def bilgi_karti(baslik, icerik):
+        st.markdown(f"### {baslik}")
+        st.write(icerik)
+
+    # ---------------- UI ----------------
+    for baslik, icerik in temel_bilgiler.items():
+
+        with st.expander(baslik):
+
+            # kısa önizleme (ilk satır)
+            ilk_satir = icerik.split("\n")[0]
+            st.write(ilk_satir)
+
+            st.caption("Detaylı bilgi için butona tıklayın")
+
+            if st.button("📌 Detay Göster", key=f"temel_{baslik}"):
+                bilgi_karti(baslik, icerik)
 # --- FOOTER ---
 st.markdown("---")
 st.caption("© 2026 Kırşehir Ahi Evran Üniversitesi Tıp Fakültesi - Tıbbi Parazitoloji Anabilim Dalı")
