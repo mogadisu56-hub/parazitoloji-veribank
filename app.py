@@ -200,7 +200,7 @@ Apatojen olarak sınıflandırılır; ancak saptanması, hastanın hijyen eksikl
     "Necator americanus": "KLİNİK: Yeni dünya kancalı kurdu. Kesici plaklar ile anemi yapar.",
     "Ancylostoma duodenale": "KLİNİK: Eski dünya kancalı kurdu. Dişli ağız yapısı.",
     "Strongyloides stercoralis": {
-        "bilgi": """1. Genel Özellikler
+        """1. Genel Özellikler
 Strongyloides stercoralis bir bağırsak nematodudur.
 Doğada serbest yaşayan dişi ve erkek formları bulunur.
 İnsan vücudunda ise yalnızca partenogenetik dişi form bulunur.
