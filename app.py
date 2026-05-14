@@ -527,27 +527,25 @@ with ana_sekme4:
 
 Parazitler konak üzerinde veya içinde yaşayarak beslenir ve çoğu zaman konağa zarar verir.""",
 
-        "🧬 Konak Tipleri": """- **Definitif Konak:** Erişkin formun yaşadığı konak  
-- **Ara Konak:** Larva veya gelişim evresinin bulunduğu konak  
-- **Rezervuar Konak:** Parazitin doğada saklandığı konak""",
+        "🧬 Konak Tipleri": """- **Definitif Konak:** Erişkin form  
+- **Ara Konak:** Larva formu  
+- **Rezervuar Konak:** Doğal taşıyıcı""",
 
-        "🔄 Bulaş Yolları": """- Fekal-oral (su ve gıda ile)  
-- Vektörler (sivrisinek, kene vb.)  
-- Deriden penetrasyon  
+        "🔄 Bulaş Yolları": """- Fekal-oral  
+- Vektör  
+- Deriden giriş  
 - Cinsel yol""",
 
         "🧪 Tanı Yöntemleri": """- Mikroskopi  
-- Serolojik testler (ELISA)  
-- Moleküler yöntemler (PCR)""",
+- ELISA  
+- PCR""",
 
-        "💊 Tedavi": """- Antiparaziter ilaçlar (Metronidazol, Albendazol vb.)  
-- Destek tedavileri  
-- Semptomatik yaklaşım""",
+        "💊 Tedavi": """- Metronidazol  
+- Albendazol""",
 
         "🛡️ Korunma": """- El hijyeni  
-- Temiz içme suyu  
-- Gıda güvenliği  
-- Vektör kontrolü"""
+- Temiz su  
+- Gıda güvenliği"""
     }
 
     # ---------------- DIALOG ----------------
@@ -557,17 +555,15 @@ Parazitler konak üzerinde veya içinde yaşayarak beslenir ve çoğu zaman kona
         st.write(icerik)
 
     # ---------------- UI ----------------
-    for baslik, icerik in temel_bilgiler.items():
+    st.markdown("### Konular")
 
-        with st.expander(baslik):
+    col1, col2 = st.columns(2)
 
-            # kısa önizleme (ilk satır)
-            ilk_satir = icerik.split("\n")[0]
-            st.write(ilk_satir)
+    for i, (baslik, icerik) in enumerate(temel_bilgiler.items()):
+        hedef_kolon = col1 if i % 2 == 0 else col2
 
-            st.caption("Detaylı bilgi için butona tıklayın")
-
-            if st.button("📌 Detay Göster", key=f"temel_{baslik}"):
+        with hedef_kolon:
+            if st.button(baslik, key=f"temel_btn_{i}", use_container_width=True):
                 bilgi_karti(baslik, icerik)
 # --- FOOTER ---
 st.markdown("---")
