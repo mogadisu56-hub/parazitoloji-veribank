@@ -326,7 +326,7 @@ with ana_sekme2:
     
     p_kat, h_kat, a_kat = st.columns(3)
 
-    # Yardımcı Fonksiyon: Veri tipine göre içeriği basar
+ # Yardımcı Fonksiyon: Veri tipine göre içeriği basar
    def parazit_kart(isim, veri):
     with st.container():
         st.markdown(f"### 🧬 {isim}")
