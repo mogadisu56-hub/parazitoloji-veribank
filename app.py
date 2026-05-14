@@ -196,7 +196,51 @@ Apatojen olarak sınıflandırılır; ancak saptanması, hastanın hijyen eksikl
     # --- NEMATODLAR ---
     "Enterobius vermicularis": "KLİNİK: Kıl kurdu. TANI: Selofan bant yöntemi (Yumurta asimetrik D harfi).",
     "Trichuris trichiura": "KLİNİK: Kamçı kurdu. TANI: Limon şeklinde, çift tıkaçlı yumurta.",
-    "Ascaris lumbricoides": "KLİNİK: En büyük nematod. Akciğer göçü (Loeffler sendromu).",
+    "Ascaris lumbricoides": {
+    "bilgi": """1. Morfoloji
+Genel Yapı: Silindirik, uçlara doğru incelen bir yapıdadır. Pembe-beyaz veya sarımsı renktedir.
+Erişkin Dişi: 20-35 cm uzunluğundadır. Kuyruk ucu düzdür. Günde yaklaşık 200.000 yumurta yumurtlayabilir.
+Erişkin Erkek: 15-30 cm uzunluğundadır. Kuyruk ucu karın tarafına doğru kıvrıktır ve spikülleri (çiftleşme organı) bulunur.
+Yumurta: Dış ortamda oldukça dirençlidir. Döllenmiş yumurtalar oval, kalın kabuklu ve dışı pütürlü (mamillone) bir tabaka ile kaplıdır.
+
+2. Yaşam Döngüsü
+Konak: Sadece insandır (monoksen).
+Giriş: Enfekte (embriyonlu) yumurtaların ağız yoluyla alınması.
+Göç (Loos Hattı): İnce bağırsakta açılan yumurtadan çıkan larvalar, bağırsak duvarını delerek kana geçer. Karaciğer üzerinden kalbe ve oradan akciğerlere ulaşır.
+Olgunlaşma: Akciğer alveollerinde büyüyen larvalar, bronşlar ve trakea yoluyla yutağa çıkar, yutulur ve tekrar ince bağırsağa döner.
+Erişkinlik: İnce bağırsakta erişkin hale gelerek çiftleşirler. Yumurtalar dışkı ile dışarı atılır. Toprakta uygun sıcaklık ve nemde 2-3 hafta içinde embriyonlu (enfektif) hale gelir.
+
+3. Bulaşma Yolu
+Fekal-Oral Yol: Dışkı ile kirlenmiş toprak, su veya iyi yıkanmamış sebze ve meyvelerin tüketilmesiyle bulaşır.
+Vektörler: Sinekler ve hamamböcekleri yumurtaları taşıyarak gıdalara bulaştırabilir.
+
+4. Patojenite ve Klinik Tablo
+Klinik belirtiler parazitin vücuttaki konumuna göre iki evrede incelenir:
+Akciğer Fazı (Erken Dönem): Larvaların akciğerden geçişi sırasında öksürük, hırıltılı solunum, ateş ve göğüs ağrısı görülür. Bu tabloya Löffler Sendromu (eosinofilik pnömoni) denir.
+Bağırsak Fazı (Geç Dönem):
+Hafif enfeksiyonlarda karın ağrısı, şişkinlik ve bulantı.
+Ağır enfeksiyonlarda (özellikle çocuklarda) bağırsak tıkanması (ileus), parazit yumağı oluşumu.
+Erişkin solucanların safra kanalına veya pankreas kanalına girmesiyle tıkanma sarılığı, kolesistit veya pankreatit gelişebilir.
+
+5. Tanı Yöntemleri
+Dışkı İncelemesi (Altın Standart): Dışkıda karakteristik yumurtaların görülmesi (Nativ-Lugol veya flotasyon yöntemleri).
+Makroskobik Tanı: Dışkı veya ağız/burun yoluyla dışarı atılan erişkin solucanın görülmesi.
+Görüntüleme: Karın röntgeninde "sabun köpüğü" manzarası veya ultrasonda safra yollarındaki solucanların saptanması.
+Laboratuvar: Akciğer fazında balgamda larva görülebilir ve kanda eosinofili (alerjik hücre artışı) saptanır.
+
+6. Tedavi
+İlaç Tedavisi: İlk seçenek Albendazol (400 mg tek doz) veya Mebendazoldür (100 mg günde 2 kez, 3 gün). Gebelerde genellikle Pirantel Pamoat tercih edilir.
+Cerrahi Müdahale: Bağırsak tıkanması veya safra yolu komplikasyonlarında cerrahi veya endoskopik müdahale gerekebilir.
+
+7. Korunma
+Kişisel Hijyen: Yemeklerden önce ve tuvaletten sonra ellerin sabunla yıkanması.
+Gıda Güvenliği: Çiğ tüketilen sebze ve meyvelerin çok iyi yıkanması.
+Sanitasyon: İnsan dışkısının gübre olarak kullanılmaması ve kanalizasyon sistemlerinin iyileştirilmesi.
+
+8. Önemli Notlar
+Ektopik Göç: Solucanlar bazen yüksek ateş, anestezi veya bazı ilaçların etkisiyle uyarılıp ağızdan, burundan çıkabilir veya apandisiti taklit edebilirler.
+Beslenme Bozukluğu: Çocuklarda protein-enerji malnütrisyonuna ve gelişme geriliğine yol açabilir çünkü parazit konakçının besinine ortak olur.
+Çevresel Direnç: Yumurtaları çevre koşullarına, dezenfektanlara ve hatta mide asidine karşı son derece dirençlidir; toprakta yıllarca canlı kalabilirler."""},
     "Necator americanus": "KLİNİK: Yeni dünya kancalı kurdu. Kesici plaklar ile anemi yapar.",
     "Ancylostoma duodenale": "KLİNİK: Eski dünya kancalı kurdu. Dişli ağız yapısı.",
     "Strongyloides stercoralis": {
