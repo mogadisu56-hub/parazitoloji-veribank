@@ -629,23 +629,7 @@ with ana_sekme3:
                 st.markdown(f"**{alt_kat}**")
                 for p in parazitler:
                     st.markdown(f"- {p}")
-                     # ---------------- DIALOG ----------------
-    @st.dialog("📌 Bilgi Kartı")
-    def bilgi_karti(baslik, icerik):
-        st.markdown(f"### {baslik}")
-        formatli_yazi_goster(icerik)
-
-    # ---------------- UI ----------------
-    st.markdown("### Konular")
-
-    col1, col2 = st.columns(2)
-
-    for i, (baslik, icerik) in enumerate(temel_bilgiler.items()):
-        hedef_kolon = col1 if i % 2 == 0 else col2
-
-        with hedef_kolon:
-            if st.button(baslik, key=f"temel_btn_{i}", use_container_width=True):
-                bilgi_karti(baslik, icerik)
+                
 # --- SEKME 4: TEMEL PARAZİTOLOJİ ---
 with ana_sekme4:
     st.markdown("## 📘 Temel Parazitoloji")
