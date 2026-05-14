@@ -317,8 +317,8 @@ with ana_sekme2:
             # A- SARCODINA
             st.markdown("<p style='font-weight:bold; color:#8b0000; margin-bottom:5px;'>A- SARCODINA</p>", unsafe_allow_html=True)
             with st.expander("Amipler"):
-                amipler = ["Entamoeba histolytica", "Entamoeba dispar", "Entamoeba polecki", "Entamoeba coli", 
-                           "Endolimax nana", "Iodamoeba bütschlii", "Entamoeba hartmanni", "Entamoeba gingivalis"]
+                amipler = ["Entamoeba histolytica", "Entamoeba dispar", "Entamoeba polecki", "Entamoeba coli", "Entamoeba hartmanni", "Entamoeba gingivalis"
+                           "Endolimax nana", "Iodamoeba bütschlii"]
                 for p in amipler: parazit_yazdir(p)
             
             with st.expander("Serbest Yaşayan Amipler"):
