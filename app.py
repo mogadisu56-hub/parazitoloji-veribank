@@ -257,7 +257,7 @@ with col2:
     st.markdown("<p style='color:gray;'>Tıbbi Parazitoloji Anabilim Dalı Akademik Rehberi</p>", unsafe_allow_html=True)
 
 # --- ANA SEKMELER ---
-ana_sekme1, ana_sekme2, ana_sekme3, ana_sekme4, admin_sekme = st.tabs([
+ana_sekme1, ana_sekme2, ana_sekme3, ana_sekme4, ana_sekme5 = st.tabs([
     "🔍 Hızlı Sorgu",
     "🗂️ Tıbbi Önemi Olan Parazitler",
     "🌳 Parazitoloji Ağacı",
