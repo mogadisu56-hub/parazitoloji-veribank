@@ -9,8 +9,8 @@ def parazit_kart(isim, veri):
     else:
         icerik = veri
 
-    st.markdown(f"### {isim}")
-   formatli_yazi_goster(icerik)
+        st.markdown(f"### {isim}")
+        formatli_yazi_goster(icerik)
 
 
 # ---------------- YARDIMCI FONKSİYON ----------------
