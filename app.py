@@ -532,47 +532,37 @@ with ana_sekme4:
 
 Parazitler konak üzerinde veya içinde yaşayarak beslenir ve çoğu zaman konağa zarar verir.""",
 
-        "🧬 KONAK": """1. Son Konak (Kesin Konak)
-
+        "🧬 KONAK": """**1. Son Konak (Kesin Konak)**
 Parazitin erişkin formunu veya eşeyli üreme evresini barındıran konaktır.
-
 Taenia saginata → son konak: insan
 Toxoplasma gondii → son konak: kedi ve kedigiller
-2. Ara Konak
 
+**2. Ara Konak**
 Parazitin erişkin olmayan (larva) veya eşeysiz üreme evresini barındıran konaktır.
-
 Taenia saginata → ara konak: sığır
 Toxoplasma gondii → ara konak: insan
-
 Bazı parazitlerde birden fazla ara konak bulunur:
-
 Diphyllobothrium latum
 ara konak: Cyclops (kopepodlar)
 ara konak: balıklar
-3. Konak Zinciri
 
+**3. Konak Zinciri**
 Parazitin yaşam döngüsünde konakların sıralanışına konak zinciri denir.
-Örnek:
-
+**Örnek:**
 Taenia saginata → insan → sığır → insan
-4. Rezervuar Konak
 
+**4. Rezervuar Konak**
 Parazitin doğada devamlılığını sağlayan, en önemli konak türüdür.
-
 Ascaris lumbricoides → insan hem tek hem rezervuar konaktır
 Trypanosoma cruzi → rezervuar: yabani hayvanlar
-5. Paratenik Konak
 
+**5. Paratenik Konak**
 Parazitin larval formunun bulunduğu ancak gelişemediği konaktır.
-
 Toxocara canis → insan paratenik konak olabilir
-6. Yatkın Konak
 
+**6. Yatkın Konak**
 Parazitlerin daha kolay yerleşebildiği konaklardır. Bu durum doğuştan veya sonradan gelişebilir.
-
-Yatkınlığı artıran faktörler:
-
+**Yatkınlığı artıran faktörler:**
 Yetersiz veya dengesiz beslenme
 Uzun süre hastanede yatış, cerrahi işlemler, kan nakli
 Bağışıklık baskılayıcı ilaç kullanımı
