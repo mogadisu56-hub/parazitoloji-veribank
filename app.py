@@ -336,7 +336,7 @@ with ana_sekme2:
                 icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Bilgi yok"
                 st.write(icerik)
             else:
-            st.write(veri)
+                st.write(veri)
 
     # 1. KOLON: PROTOZOONLAR (Görseldeki Hiyerarşiye Göre)
     with p_kat:
