@@ -607,6 +607,7 @@ with ana_sekme5:
 
         veri_kaydet(parazit_verisi)
         st.success("Kaydedildi!")
+        st.rerun()
     
 # --- FOOTER ---
 st.markdown("---")
