@@ -303,8 +303,8 @@ with ana_sekme2:
                  # "bilgi" veya "BİLGİ" anahtarını kontrol et (küçük/büyük harf duyarlılığı için)
                  icerik = veri.get("bilgi") or veri.get("BİLGİ") or "Detaylı bilgi bulunamadı."
                  st.write(icerik)
-                    else:
-                        st.write(veri)
+             else:
+                 st.write(veri)
 
     # 1. KOLON: PROTOZOONLAR (Görseldeki Hiyerarşiye Göre)
     with p_kat:
