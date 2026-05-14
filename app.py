@@ -2,16 +2,6 @@ import streamlit as st
 import os
 st.set_page_config(layout="wide") 
 st.markdown("""
-    <style>
-        .block-container {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            padding-left: 3rem;
-            padding-right: 3rem;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
 # geri kalan kod...
 
 # ---------------- DIALOG ----------------
