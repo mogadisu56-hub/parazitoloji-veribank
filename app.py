@@ -199,7 +199,113 @@ Apatojen olarak sınıflandırılır; ancak saptanması, hastanın hijyen eksikl
     "Ascaris lumbricoides": "KLİNİK: En büyük nematod. Akciğer göçü (Loeffler sendromu).",
     "Necator americanus": "KLİNİK: Yeni dünya kancalı kurdu. Kesici plaklar ile anemi yapar.",
     "Ancylostoma duodenale": "KLİNİK: Eski dünya kancalı kurdu. Dişli ağız yapısı.",
-    "Strongyloides stercoralis": "KLİNİK: Larva akurens. Dışkıda rabditiform larva görülür.",
+    "Strongyloides stercoralis":{ """1. Genel Özellikler
+Strongyloides stercoralis bir bağırsak nematodudur.
+Doğada serbest yaşayan dişi ve erkek formları bulunur.
+İnsan vücudunda ise yalnızca partenogenetik dişi form bulunur.
+Enfektif form: Filariform (L3) larva
+Bulaş yolu: Deriden penetrasyon
+2. Morfoloji
+Serbest yaşayan form:
+Erkek ve dişi bulunur
+Yaklaşık 1 mm uzunluğundadır
+Parazitik form:
+Sadece dişi bulunur
+Uzunluk: 2–3 mm
+Çap: ~0.04 mm
+Partenogenetik çoğalma yapar
+Yumurtalar:
+Boyut: 32–54 µm
+İçinde larva gelişmiş olarak atılır
+Dışkıda genellikle yumurta değil larva görülür
+3. Hayat Döngüsü
+3.1. Serbest Yaşam Evresi
+Toprakta yaşar, beslenir ve çoğalır
+Erkek ve dişi çiftleşir
+Yeni nesil oluşturur
+3.2. Gelişim Yolları
+
+a) Çapraşık (indirekt) döngü
+
+Rabditiform larva → serbest yaşayan erişkinler
+Birkaç nesil sonra → filariform larva
+Filariform larva → insan derisinden girer
+
+b) Düz (direkt) döngü
+
+Rabditiform larva → doğrudan filariform larvaya dönüşür
+Deriden konağa girer
+Serbest yaşayan nesil yoktur
+4. İnsan Vücudundaki Göç
+Deriden giriş
+Kan dolaşımı → kalp → akciğer
+Alveollere geçiş
+Bronş → trakea → farinks → yutma
+İnce bağırsakta erişkin dişiye dönüşüm
+5. Otoenfeksiyon
+
+Strongyloidiasis’in en önemli özelliğidir.
+
+5.1. İç otoenfeksiyon
+Larva bağırsakta filariform hale gelir
+Bağırsak duvarından tekrar girer
+5.2. Dış otoenfeksiyon
+Perianal bölgede larva gelişir
+Deriden tekrar giriş yapar
+
+➡️ Sonuç:
+
+Parazit yıllarca vücutta kalabilir
+Enfeksiyon şiddeti artabilir
+6. Epidemiyoloji
+Kaynak: İnsan
+Yaygın olduğu bölgeler:
+Güney Asya
+Afrika
+Tropikal Amerika
+Dünya genelinde: 100–200 milyon kişi enfekte
+Risk faktörleri:
+Sıcaklık
+Nem
+Toprak yapısı
+7. Klinik Bulgular
+7.1. Kutanöz Bulgular
+Kaşıntı
+Eritem
+Larva currens (çizgi şeklinde ürtiker)
+7.2. Pulmoner Bulgular
+Öksürük
+Hemoptizi
+Bronkopnömoni bulguları
+7.3. İntestinal Bulgular
+Karın ağrısı
+İshal
+Kronik enfeksiyonda:
+Kilo kaybı
+Zayıflama
+7.4. Hiperenfeksiyon Sendromu
+Özellikle AIDS hastalarında görülür
+Yaygın larva göçü
+Sepsis, menenjit, ölüm riski
+8. Tanı
+Dışkıda rabditiform larva aranır
+Balgamda filariform larva görülebilir
+Duodenum sıvısı incelenebilir
+Kültür: Harada-Mori yöntemi
+Seroloji: ELISA
+9. Tedavi
+Albendazole: 400 mg, 3 gün
+Ivermectin: tek doz (yüksek etkinlik)
+
+➡️ Amaç: Parazitin tamamen eradikasyonu
+
+10. Korunma
+Toprakla temas sırasında korunma (ayakkabı kullanımı)
+Hijyen kurallarına uyum
+Enfekte bireylerin tedavisi
+11. Önemli Özellik (Klinik Vurgu)
+Otoenfeksiyon nedeniyle kronik ve uzun süreli enfeksiyon yapar
+İmmünsüpresif hastalarda hayatı tehdit edici olabili"""=,
     "Trichinella spiralis": "KLİNİK: Kaslarda kist. Periorbital ödem ve kas ağrısı.",
     "Dracunculus medinensis": "KLİNİK: Medine solucanı. Ara konak: Cyclops.",
 
