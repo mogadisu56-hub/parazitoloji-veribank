@@ -598,7 +598,9 @@ with ana_sekme5:
         mevcut_bilgi = veri
 
     yeni_bilgi = st.text_area("Bilgi düzenle", mevcut_bilgi)
-
+    if st.session_state.get("kayit_mesaj"):
+        st.success("Kaydedildi!")
+        st.session_state.kayit_mesaj = False
     if st.button("💾 Kaydet"):
         if isinstance(veri, dict):
             parazit_verisi[secim]["bilgi"] = yeni_bilgi
@@ -606,7 +608,8 @@ with ana_sekme5:
             parazit_verisi[secim] = yeni_bilgi
 
         veri_kaydet(parazit_verisi)
-        st.success("Kaydedildi!")
+
+        st.session_state.kayit_mesaj = True
         st.rerun()
     
 # --- FOOTER ---
