@@ -528,7 +528,7 @@ with ana_sekme4:
 Parazitler konak üzerinde veya içinde yaşayarak beslenir ve çoğu zaman konağa zarar verir.""",
 
         "🧬 KONAK": """ Konak Türleri
-**1. Son Konak (Kesin Konak)**
+-**1. Son Konak (Kesin Konak)**
 
 Parazitin erişkin formunu veya eşeyli üreme evresini barındıran konaktır.
 
@@ -552,7 +552,7 @@ Parazitin yaşam döngüsünde konakların sıralanışına konak zinciri denir.
 Örnek:
 
 Taenia saginata → insan → sığır → insan
-**4. Rezervuar Konak**
+-**4. Rezervuar Konak**
 
 Parazitin doğada devamlılığını sağlayan, en önemli konak türüdür.
 
