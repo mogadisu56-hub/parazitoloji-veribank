@@ -724,7 +724,34 @@ Yoğun stres, aşırı yorgunluk, doğal afetler
 
 Bu bireylerde parazitler daha kolay yerleşir ve enfeksiyonlar daha ağır seyredebilir. Özellikle AIDS hastalarında ölümler çoğu zaman doğrudan virüsten değil, fırsatçı (sekonder) enfeksiyonlardan kaynaklanır.
 """,
+        "Vektör Kavramı ve Sınıflandırılması": """Vektör, en genel tanımıyla enfeksiyon etkenini (parazit, bakteri, virüs vb.) bir konaktan diğerine taşıyan canlıya denir. Tıbbi parazitolojide ise genellikle paraziti parazitli bir omurgalıdan sağlam bir omurgalıya nakleden omurgasız (genellikle eklembacaklı) canlılar için kullanılır.
 
+1. Biyolojik Vektörler
+Biyolojik vektörler, parazitin yaşam döngüsünün zorunlu bir parçasıdır. Parazit bu canlıların vücudunda gelişimsel bir değişim geçirir veya çoğalır.
+Parazitin biyolojik vektör içindeki davranışına göre üç alt başlık incelenir:
+Sadece Çoğalan (Propagatif): Parazit vektörde sadece sayıca artar, şekil değiştirmez.
+Örnek: Veba etkeni (Yersinia pestis).
+Sadece Şekil Değiştiren (Siklo-gelişimsel): Parazit sayıca artmaz ancak bir larva evresinden diğerine geçer.
+Örnek: Wuchereria bancrofti (Filaryal parazitler).
+Hem Çoğalan Hem Şekil Değiştiren (Siklo-propagatif): Parazit hem sayıca artar hem de yaşam döngüsünde aşama kaydeder.
+Örnek: Plasmodium türleri (Sıtma etkeni). Dişi Anofel sivrisineği içinde eşeyli çoğalma gerçekleştiği için Anofel aynı zamanda parazitin son konağıdır.
+
+Bulaşma Mekanizmaları
+Biyolojik vektörler paraziti şu yollarla bulaştırabilir:
+İnokülasyon (Enjekte etme): Kan emme sırasında tükürük bezleri aracılığıyla doğrudan kana verme (Sıtma).
+Aktif Giriş: Parazitin vektörden deri üzerine bırakılması ve açılan delikten kendi çabasıyla girmesi (Bazı filaryalar).
+Kontaminasyon (Dışkı yoluyla): Vektörün dışkısındaki parazitin, ısırık yerinden veya derideki sıyrıklardan girmesi (Trypanosoma cruzi / Chagas Hastalığı).
+Ezilme/Parçalanma: Vektörün konak üzerinde ezilmesiyle vücut sıvılarındaki etkenin deriye geçmesi (Rickettsia prowazekii / Vücut biti).
+
+2. Mekanik Vektörler
+Mekanik vektörler, parazitin yaşam döngüsünde herhangi bir biyolojik role sahip değildir. Parazit, vektörün ağız parçalarına, ayaklarına veya kanatlarına yapışarak tamamen fiziksel (pasif) yollarla taşınır.
+Karakteristik Özelliği: Parazit vektör içinde gelişmez veya çoğalmaz. Vektör sadece "yürüyen veya uçan bir şırınga" görevi görür.
+Örnekler: Bazı sokucu sineklerin kan emme esnasında ağız parçalarıyla etkeni taşıması.
+Terminolojik Tartışmalar ve İstisnalar
+Metinde belirtilen karasinek (Musca domestica) ve hamamböceği gibi canlılar, patojenleri yiyeceklere taşıyarak dolaylı yoldan enfeksiyon yayarlar.
+
+Tartışma: Klasik vektör tanımı "parazitli omurgalıdan sağlam omurgalıya" doğrudan taşımayı öngördüğü için, bu canlılar bazen "vektör" yerine "taşıyıcı" veya "mekanik nakledici" olarak adlandırılır.
+Ara Konak Durumu: Bazı pire türleri helminthlere (solucanlara) ara konaklık yapar. Bu durumda pire hem bir vektör hem de biyolojik bir ara konak işlevi görür; bu da kategorizasyonun karmaşıklığını gösterir.""",
         "🔄 Bulaş Yolları": """- Fekal-oral  
 - Vektör  
 - Deriden giriş  
