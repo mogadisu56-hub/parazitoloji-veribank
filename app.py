@@ -1,5 +1,7 @@
 import streamlit as st
 import json
+if "kayit_mesaj" not in st.session_state:
+    st.session_state.kayit_mesaj = False
 def veri_yukle():
     import json
     with open("parazitler.json", "r", encoding="utf-8") as f:
@@ -593,6 +595,9 @@ Parazit, yaşamını sürdürebilmek için başka bir canlıya (konak) bağıml�
 - Vektör kontrolü
 """)
 # --- SEKME 5: VERİ DÜZENLE ---
+if st.session_state.kayit_mesaj:
+    st.success("Kaydedildi!")
+    st.session_state.kayit_mesaj = False
 with ana_sekme5:
     st.markdown("## ⚙️ Veri Düzenleme Paneli")
 
@@ -609,19 +614,20 @@ with ana_sekme5:
     if st.session_state.get("kayit_mesaj"):
         st.success("Kaydedildi!")
         st.session_state.kayit_mesaj = False
-    if st.button("💾 Kaydet"):
+      if st.button("💾 Kaydet"):
+
         if isinstance(veri, dict):
             parazit_verisi[secim]["bilgi"] = yeni_bilgi
         else:
             parazit_verisi[secim] = yeni_bilgi
 
-        veri_kaydet(parazit_verisi)
+            veri_kaydet(parazit_verisi)
 
-    # 🔥 EN KRİTİK SATIR
-        st.session_state.veri = veri_yukle()
+            st.session_state.veri = veri_yukle()
 
-        st.success("Kaydedildi!")
-        st.rerun()
+            st.session_state.kayit_mesaj = True   # 🔥 mesajı sakla
+
+            st.rerun()   # 🔥 sonra yenile
     
 # --- FOOTER ---
 st.markdown("---")
