@@ -4,8 +4,9 @@ def veri_yukle():
     import json
     with open("parazitler.json", "r", encoding="utf-8") as f:
         return json.load(f)
-        if "veri" not in st.session_state:
-        st.session_state.veri = veri_yukle()
+
+if "veri" not in st.session_state:
+    st.session_state.veri = veri_yukle()
 
 parazit_verisi = st.session_state.veri
 # JSON yükle
