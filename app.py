@@ -246,7 +246,12 @@ with col2:
     st.markdown("<p style='color:gray;'>Tıbbi Parazitoloji Anabilim Dalı Akademik Rehberi</p>", unsafe_allow_html=True)
 
 # --- ANA SEKMELER ---
-ana_sekme1, ana_sekme2, ana_sekme3 = st.tabs(["🔍 Hızlı Sorgu", "🗂️ Tıbbi Önemi Olan Parazitler", "🌳 Parazitoloji Ağacı"])
+ana_sekme1, ana_sekme2, ana_sekme3, ana_sekme4 = st.tabs([
+    "🔍 Hızlı Sorgu",
+    "🗂️ Tıbbi Önemi Olan Parazitler",
+    "🌳 Parazitoloji Ağacı",
+    "📘 Temel Parazitoloji"
+])
 
 # --- SEKME 1: SORGULAMA ---
 with ana_sekme1:
@@ -488,7 +493,85 @@ with ana_sekme2:
             st.info("Bu sınıftakiler genellikle paraziter hastalıkların ara konaklarıdır.")
             kabuklular = ["Cyclops strenuus", "Eriocheir sinensis"]
             for p in kabuklular: parazit_yazdir(p)
+                # --- SEKME 3: PARAZİTOLOJİ AĞACI ---
+with ana_sekme3:
+    st.markdown("### 🌳 Parazitoloji Ağacı")
 
+    agac = {
+        "🧫 Protozoonlar": {
+            "Amipler": [
+                "Entamoeba histolytica", "Entamoeba coli", "Entamoeba dispar",
+                "Endolimax nana", "Iodamoeba bütschlii"
+            ],
+            "Kamçılılar": [
+                "Giardia intestinalis", "Trichomonas vaginalis"
+            ],
+            "Sporozoonlar": [
+                "Plasmodium falciparum", "Toxoplasma gondii"
+            ]
+        },
+        "🐛 Helmintler": {
+            "Nematodlar": [
+                "Ascaris lumbricoides", "Enterobius vermicularis"
+            ],
+            "Sestodlar": [
+                "Taenia saginata", "Echinococcus granulosus"
+            ],
+            "Trematodlar": [
+                "Fasciola hepatica", "Schistosoma mansoni"
+            ]
+        },
+        "🕷️ Artropodlar": {
+            "Böcekler": [
+                "Pediculus humanus capitis", "Pthirus pubis"
+            ],
+            "Akarlar": [
+                "Sarcoptes scabiei"
+            ]
+        }
+    }
+
+    # Ağaç yapısını yazdır
+    for ana_kategori, alt_kategoriler in agac.items():
+        with st.expander(ana_kategori):
+            for alt_kat, parazitler in alt_kategoriler.items():
+                st.markdown(f"**{alt_kat}**")
+                for p in parazitler:
+                    st.markdown(f"- {p}")
+# --- SEKME 4: TEMEL PARAZİTOLOJİ ---
+with ana_sekme4:
+    st.markdown("## 📘 Temel Parazitoloji")
+
+    st.markdown("""
+### 🔬 Parazit Nedir?
+Parazit, yaşamını sürdürebilmek için başka bir canlıya (konak) bağımlı olan organizmadır.
+
+### 🧬 Konak Tipleri
+- **Definitif Konak:** Erişkin formun yaşadığı konak
+- **Ara Konak:** Larva veya gelişim evresinin bulunduğu konak
+- **Rezervuar Konak:** Doğada parazitin saklandığı konak
+
+### 🔄 Bulaş Yolları
+- Fekal-oral
+- Vektör (sivrisinek, kene vb.)
+- Deriden penetrasyon
+- Cinsel yol
+
+### 🧪 Tanı Yöntemleri
+- Mikroskopi
+- Seroloji (ELISA)
+- PCR (moleküler tanı)
+
+### 💊 Tedavi
+- Antiparaziter ilaçlar (Metronidazol, Albendazol vb.)
+- Destek tedavileri
+
+### 🛡️ Korunma
+- El hijyeni
+- Temiz su kullanımı
+- Gıda güvenliği
+- Vektör kontrolü
+""")
 # --- FOOTER ---
 st.markdown("---")
 st.caption("© 2026 Kırşehir Ahi Evran Üniversitesi Tıp Fakültesi - Tıbbi Parazitoloji Anabilim Dalı")
