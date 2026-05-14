@@ -1,6 +1,13 @@
 import streamlit as st
 import json
+def veri_yukle():
+    import json
+    with open("parazitler.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+        if "veri" not in st.session_state:
+        st.session_state.veri = veri_yukle()
 
+parazit_verisi = st.session_state.veri
 # JSON yükle
 def veri_yukle():
     with open("parazitler.json", "r", encoding="utf-8") as f:
@@ -602,15 +609,19 @@ with ana_sekme5:
         st.success("Kaydedildi!")
         st.session_state.kayit_mesaj = False
     if st.button("💾 Kaydet"):
-        if isinstance(veri, dict):
-            parazit_verisi[secim]["bilgi"] = yeni_bilgi
-        else:
-            parazit_verisi[secim] = yeni_bilgi
 
-        veri_kaydet(parazit_verisi)
+    if isinstance(veri, dict):
+        parazit_verisi[secim]["bilgi"] = yeni_bilgi
+    else:
+        parazit_verisi[secim] = yeni_bilgi
 
-        st.session_state.kayit_mesaj = True
-        st.rerun()
+    veri_kaydet(parazit_verisi)
+
+    # 🔥 EN KRİTİK SATIR
+    st.session_state.veri = veri_yukle()
+
+    st.success("Kaydedildi!")
+    st.rerun()
     
 # --- FOOTER ---
 st.markdown("---")
